@@ -59,6 +59,7 @@
 </svelte:head>
 
 <h1>Blog posts</h1>
+<p>Mehr sind unterwegs... 🚄</p>
 
 <ul>
   {#each posts as post}
