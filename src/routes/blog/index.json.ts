@@ -1,6 +1,7 @@
 import posts from './_posts.js';
+import type { RequestHandler } from '@sveltejs/kit';
 
-const contents = JSON.stringify(posts.map(post => {
+const body = JSON.stringify(posts.map(post => {
 	return {
 		title: post.title,
 		date: post.date,
@@ -8,10 +9,9 @@ const contents = JSON.stringify(posts.map(post => {
 	};
 }));
 
-export function get(req, res) {
-	res.writeHead(200, {
-		'Content-Type': 'application/json'
-	});
 
-	res.end(contents);
-}
+export const get: RequestHandler = async () => {
+	return {
+		body,
+	};
+};

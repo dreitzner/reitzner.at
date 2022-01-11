@@ -33,6 +33,8 @@ posts.forEach(post => {
 	post.html = post.html.replace(/^\t{3}/gm, '');
 });
 
-posts.sort((a, b) =>  new Date(b.date) - new Date(a.date));
+const date2Number = (string: string) => (new Date(string)).getMilliseconds();
+
+posts.sort((a, b) =>  date2Number(b.date) - date2Number(a.date));
 
 export default posts;

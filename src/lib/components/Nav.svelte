@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
+	import { page } from '$app/stores';
   import Wappen from '$lib/icons/Wappen.svelte';
-  export let segment;
+
+  $:segment = $page.url.pathname;
 </script>
 
 <style>
@@ -65,23 +67,23 @@
   </a>
   <ul>
     <li>
-      <a aria-current={segment === undefined ? 'page' : undefined} href=".">
+      <a aria-current={'/' === $page.url.pathname ? 'page' : undefined} href="/">
         home
       </a>
     </li>
     <li>
       <a
         rel="prefetch"
-        aria-current={segment === 'music' ? 'page' : undefined}
-        href="music">
+        aria-current={'/music' === $page.url.pathname ? 'page' : undefined}
+        href="/music">
         music
       </a>
     </li>
     <li>
       <a
         rel="prefetch"
-        aria-current={segment === 'blog' ? 'page' : undefined}
-        href="blog">
+        aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}
+        href="/blog">
         blog
       </a>
     </li>

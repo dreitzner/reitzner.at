@@ -1,14 +1,21 @@
 <script context="module">
-	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
-		const data = await res.json();
-		if (res.status === 200) {
-			return { post: data };
-		} else {
-			this.error(res.status, data.message);
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load({ params, fetch }) {
+		const url = `/blog/${params.slug}.json`;
+		const res = await fetch(url);
+
+		if (res.ok) {
+			return {
+				props: {
+					post: await res.json()
+				}
+			};
 		}
+
+		return {
+			status: res.status,
+			error: new Error(`Could not load ${url}`)
+		};
 	}
 </script>
 

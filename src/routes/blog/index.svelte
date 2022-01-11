@@ -1,11 +1,21 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`blog.json`)
-      .then(r => r.json())
-      .then(posts => {
-        return { posts };
-      });
-  }
+<script context="module" lang="ts">
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load({ params, fetch, session, stuff }) {
+		const res = await fetch('/blog.json');
+
+		if (res.ok) {
+			return {
+				props: {
+					posts: await res.json()
+				}
+			};
+		}
+
+		return {
+			status: res.status,
+			error: new Error(`Could not load blog.json`)
+		};
+	}
 </script>
 
 <script>

@@ -1,28 +1,17 @@
 import posts from './_posts.js';
+import type { RequestHandler } from '@sveltejs/kit';
 
-const lookup = new Map();
-posts.forEach(post => {
-	lookup.set(post.slug, JSON.stringify(post));
-});
-
-export function get(req, res, next) {
-	// the `slug` parameter is available because
-	// this file is called [slug].json.js
+export const get: RequestHandler = async (req) => {
 	const { slug } = req.params;
-
-	if (lookup.has(slug)) {
-		res.writeHead(200, {
-			'Content-Type': 'application/json'
-		});
-
-		res.end(lookup.get(slug));
-	} else {
-		res.writeHead(404, {
-			'Content-Type': 'application/json'
-		});
-
-		res.end(JSON.stringify({
-			message: `Not found`
-		}));
+	const post = posts.find(post => post.slug === slug);
+	if (post)
+	{
+		return {
+			body: JSON.stringify(post)
+		};
 	}
-}
+	return {
+		status: 404,
+		body: 'Slug not found'
+	}
+};
