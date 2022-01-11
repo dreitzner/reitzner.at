@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ params, fetch, session, stuff }) {
+	export async function load({ fetch }) {
 		const res = await fetch('/blog.json');
 
 		if (res.ok) {
@@ -41,6 +41,8 @@
 
   img {
     height: 25px;
+    width: 25px;
+    object-fit: cover;
     width: auto;
     border-radius: 50%;
     margin-right: 0.5em;
@@ -49,8 +51,9 @@
 
   @media (min-width: 480px) {
     img {
-		height: 50px;
-	}
+      height: 50px;
+      width: 50px;
+    }
   }
 </style>
 
@@ -59,7 +62,6 @@
 </svelte:head>
 
 <h1>Blog posts</h1>
-<p>Mehr sind unterwegs... 🚄</p>
 
 <ul>
   {#each posts as post}
@@ -68,10 +70,17 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
     <li>
-      <a rel="prefetch" class="flex link" href="blog/{post.slug}">
-        <img src="img/blog/{post.slug}.jpg" alt={post.title} />
+      {#if post.url}
+      <a class="flex link" href="{post.url}">
+        <img src="{post.image}" alt={post.title} />
         {post.title} [{getYear(post.date)}]
       </a>
+      {:else}
+      <a rel="prefetch" class="flex link" href="/blog/{post.slug}">
+        <img src="/img/blog/{post.slug}.jpg" alt={post.title} />
+        {post.title} [{getYear(post.date)}]
+      </a>
+      {/if}
     </li>
   {/each}
 </ul>
