@@ -34,6 +34,7 @@ export async function onRequestGet({ env }) {
             image: devTo.ok,
             date: devTo.ok,
             data: devTo,
+            key: env.VITE_DEVTO_API_KEY,
         }) 
     }
     return new Response(JSON.stringify(devToJson), null, 2);
