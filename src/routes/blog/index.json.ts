@@ -34,9 +34,24 @@ export const get: RequestHandler = async () => {
 					date: article.created_at,
 				}
 			});
+		} else {
+			devToJson.push({
+				url: devTo.ok,
+				title: devTo.ok,
+				image: devTo.ok,
+				date: devTo.ok,
+				data: devTo,
+			}) 
 		}
 	} catch (err) {
 		console.error(err);
+		devToJson.push({
+			url: 'error',
+			title: 'error',
+			image: 'error',
+			date: 'error',
+			data: err,
+		})
 	}
 	
 
