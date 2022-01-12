@@ -23,7 +23,7 @@ export const get: RequestHandler = async () => {
 					'api-key': `${import.meta.env.VITE_DEVTO_API_KEY}`,
 				},
 				mode: 'cors', // no-cors, *cors, same-origin
-				credentials: 'same-origin', // include, *same-origin, omit
+				// credentials: 'same-origin', // include, *same-origin, omit
 				// cf: {
 				// 	// Always cache this fetch regardless of content type
 				// 	// for a max of 60 seconds before revalidating the resource
