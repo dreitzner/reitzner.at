@@ -20,8 +20,14 @@ export const get: RequestHandler = async () => {
 			'https://dev.to/api/articles?username=dreitzner',
 			{
 				headers: {
-					'api-key': import.meta.env.VITE_DEVTO_API_KEY,
-				}
+					'api-key': `${import.meta.env.VITE_DEVTO_API_KEY}`,
+				},
+				// cf: {
+				// 	// Always cache this fetch regardless of content type
+				// 	// for a max of 60 seconds before revalidating the resource
+				// 	cacheTtl: 60,
+				// 	cacheEverything: true,
+				// },
 			}
 		)
 		console.log('DevTo Request:', devTo.ok)
@@ -41,7 +47,8 @@ export const get: RequestHandler = async () => {
 				image: devTo.ok,
 				date: devTo.ok,
 				data: devTo,
-				key: import.meta.env.VITE_DEVTO_API_KEY,
+				header: devTo.headers,
+				// key: import.meta.env.VITE_DEVTO_API_KEY,
 			}) 
 		}
 	} catch (err) {
