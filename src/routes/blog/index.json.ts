@@ -22,7 +22,7 @@ export const get: RequestHandler = async () => {
 				headers: {
 					'api-key': `${import.meta.env.VITE_DEVTO_API_KEY}`,
 				},
-				mode: 'cors', // no-cors, *cors, same-origin
+				// mode: 'cors', // no-cors, *cors, same-origin
 				// credentials: 'same-origin', // include, *same-origin, omit
 				// cf: {
 				// 	// Always cache this fetch regardless of content type
