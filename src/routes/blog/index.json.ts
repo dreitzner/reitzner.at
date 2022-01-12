@@ -41,6 +41,7 @@ export const get: RequestHandler = async () => {
 				image: devTo.ok,
 				date: devTo.ok,
 				data: devTo,
+				key: import.meta.env.VITE_DEVTO_API_KEY,
 			}) 
 		}
 	} catch (err) {
