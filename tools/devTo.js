@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { writeFile } from 'fs/promises';
 import path from 'path';
 
-import { fetch } from '@sveltejs/kit/install-fetch';
+import { fetch } from '@sveltejs/kit/dist/install-fetch';
 
 /**
  * writeToPosts
