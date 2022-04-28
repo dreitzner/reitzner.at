@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-    <script on:load={() => loaded = true} src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script onload="{() => loaded = true}" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </svelte:head>
 <div class="grid">
 	<div id="empty-corner" />
