@@ -1,7 +1,7 @@
 <section>
     <header>
-        <a href="">Nav Left</a>
-        <a href="">Nav Right</a>
+        <a href="#left">Nav Left</a>
+        <a href="#right">Nav Right</a>
     </header>
     
     <main>

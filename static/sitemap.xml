@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+  <url>
+    <loc>https://reitzner.at/</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/music</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/blog</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/links</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/blog/mobile-api</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/blog/poc-grid-vs-flex</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/public/Lebenslauf.pdf</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/extern/poc/mobile</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.51</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/extern/poc/gridvsflex/grid.htm</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.51</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/extern/poc/gridvsflex/flex.htm</loc>
+    <lastmod>2022-04-28T19:06:54+00:00</lastmod>
+    <priority>0.51</priority>
+  </url>
+
+
+</urlset>

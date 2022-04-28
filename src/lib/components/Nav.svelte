@@ -11,7 +11,7 @@
 		<li>
 			<a aria-current={'/' === $page.url.pathname ? 'page' : undefined} href="/"> home </a>
 		</li>
-		<li class="space-right">
+		<li>
 			<a
 				rel="prefetch"
 				aria-current={'/music' === $page.url.pathname ? 'page' : undefined}
@@ -20,8 +20,8 @@
 				music
 			</a>
 		</li>
-
-		<li class="space-left">
+		<li class="spacer" />
+		<li>
 			<a
 				rel="prefetch"
 				aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}
@@ -44,44 +44,59 @@
 
 <style>
 	nav {
-		padding: 0 1em;
-    justify-content: center;
+		justify-content: center;
+		--spacer-width: 5.5rem
+	}
+
+	@media (max-width: 640px) {
+		ul {
+			width: 100vw;
+		}
+	}
+	@media (min-width: 641px) {
+		nav {
+			--spacer-width: 8rem
+		}
+
+		ul::before,
+		ul::after {
+			content: '';
+		}
 	}
 
 	ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr var(--spacer-width) 1fr 1fr;
+		justify-items: center;
 		margin: 0;
 		padding: 0;
-		background-color: #0D47A1;
-    color: #fff;
-    font-weight: 600;
-    height: 40px;
-    position: relative;
+		background-color: var(--color-blue);
+		color: #fff;
+		font-weight: 600;
+		height: var(--nav-height);
+		position: relative;
+		list-style: none;
 	}
+	
 
-	/* clearfix */
-	ul::before, ul::after {
-		content: '';
+	ul::before,
+	ul::after {
 		display: block;
 		width: 0;
-    height: 0;
-    border-style: solid;
-    position: absolute;
-    top: 0;
+		height: 0;
+		border-style: solid;
+		position: absolute;
+		top: 0;
 	}
 	ul::before {
-    left: -7px;
-    border-width: 0 7px 40px 0;
-    border-color: transparent #0D47A1 transparent transparent;
+		left: -7px;
+		border-width: 0 7px var(--nav-height) 0;
+		border-color: transparent var(--color-blue) transparent transparent;
 	}
 	ul::after {
-    right: -7px;
-    border-width: 0 0 40px 7px;
-    border-color: transparent transparent transparent #0D47A1;
-	}
-
-	li {
-		display: block;
-		float: left;
+		right: -7px;
+		border-width: 0 0 var(--nav-height) 7px;
+		border-color: transparent transparent transparent var(--color-blue);
 	}
 
 	[aria-current] {
@@ -94,7 +109,7 @@
 		content: '';
 		width: 80%;
 		height: 5px;
-    background-color: #FFC107;
+		background-color: #ffc107;
 		display: block;
 		top: -2px;
 		left: 10%;
@@ -104,31 +119,26 @@
 
 	li a {
 		text-decoration: none;
-		padding: 0.5em 1em;
+		padding: 0.5em 1.5em;
 		display: block;
 	}
 
 	a :global(.wappen) {
-		height: calc(40px - 0.2em);
-    padding: 1rem;
+		height: calc(var(--spacer-width) / 3);
+		padding: .5rem;
 	}
-  .logo {
-    position: absolute;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    transform: translateY(-4rem);
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 1;
-    background-color: rgba(53, 53, 53, .53);
-  }
-
-  .space-right {
-    margin-right: 5rem;
-  }
-  
-  .space-left {
-    margin-left: 5rem;
-  }
+	.logo {
+		position: absolute;
+		width: var(--spacer-width);
+		height: var(--spacer-width);
+		border-radius: 50%;
+		transform: translateY(calc(var(--spacer-width) / -2));
+		justify-content: center;
+		align-items: flex-end;
+		z-index: 1;
+		background-color: rgba(53, 53, 53, 0.53);
+	}
+	.spacer {
+		width: var(--spacer-width);
+	}
 </style>

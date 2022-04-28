@@ -27,10 +27,6 @@
   }
 </style>
 
-<svelte:head>
-  <title>reitzner.at - Home</title>
-</svelte:head>
-
 <h1>Herzlich willkommen auf reitzner.at</h1>
 
 <div class="flex">

@@ -1,6 +1,3 @@
-<svelte:head>
-	<title>reitzner.at - Music</title>
-</svelte:head>
 <h1>Love &amp; Grace</h1>
 <p>
 Dieses Lied spiegelt das Verlangen Gottes wieder, dass jeder mit seiner Liebe und seiner Gnade erreicht wird.</p>

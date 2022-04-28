@@ -20,7 +20,6 @@ const writeToPosts = async (name, data) => {
 
 const getDevToPosts = async () => {
 	try {
-		// maybe cache them with cloudflare?
 		const devTo = await fetch('https://dev.to/api/articles?username=dreitzner', {
 			headers: {
 				'api-key': `${process.env.VITE_DEVTO_API_KEY}`

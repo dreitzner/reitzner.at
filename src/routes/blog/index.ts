@@ -1,6 +1,8 @@
 import posts from './_posts';
 import devTo from './_devTo';
 
+import type { RequestHandler } from '.svelte-kit/types/src/routes/blog/index';
+
 const internal = posts.map(post => {
 	return {
 		title: post.title,
@@ -11,8 +13,8 @@ const internal = posts.map(post => {
 
 
 const date2Number = (string: string) => (new Date(string)).getTime();
-/** @type {import('./routes/blog/index').RequestHandler} */
-export function get() {
+
+export const get: RequestHandler = () => {
 	const posts = [
 		...internal,
 		...devTo,
