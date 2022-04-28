@@ -4,10 +4,9 @@ import type { RequestHandler } from '@sveltejs/kit';
 export const get: RequestHandler = async (req) => {
 	const { slug } = req.params;
 	const post = posts.find(post => post.slug === slug);
-	if (post)
-	{
+	if (post) {
 		return {
-			body: JSON.stringify(post)
+			body: { post }
 		};
 	}
 	return {

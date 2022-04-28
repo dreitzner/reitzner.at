@@ -35,14 +35,16 @@
 
 <div class="flex">
   <div>
-    <p>
-      Wollen Sie ein kleines bis mittleres Web- oder Softwareprojekt bewältigen?
-      <br />
-      Suchen Sie nach Tipps und Tricks? Dann sind Sie hier genau richtig!
-      <br />
-      Stöbern Sie in den schon bewältigten Projekten und überzeugen sie sich
-      selbst.
-    </p>
+    <h2>Ich bin...</h2>
+    <ul>
+      <li>seit mehr als 12 Jahren glücklich verheiratet</li>
+      <li>Vater von vier tollen Kindern (zwei Jungs und 2 Mädls)</li>
+      <li>ausgebildeter Mechatroniker (Schwerpunkt Robotik)</li>
+      <li>ein hobby Webyist, der sein Hobby zum Beruf gemacht hat</li>
+      <li>Dev Lead bei Emakina CEE mit einem Team von 15 Leuten</li>
+      <li>Musiker</li>
+      <li>Blogger</li>
+    </ul>
     <p>Ing. Domenik Reitzner</p>
   </div>
 <img src="img/dr.jpg" alt="Domenik Reitzner">

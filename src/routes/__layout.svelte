@@ -1,8 +1,6 @@
 <script>
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-
-	export let segment;
 </script>
 
 <style>
@@ -14,9 +12,14 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
+
+	:global(body) {
+		scrollbar-gutter: stable;
+		overflow: auto;
+	}
 </style>
 
-<Nav {segment}/>
+<Nav />
 
 <main>
 	<slot></slot>
