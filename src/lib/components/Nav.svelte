@@ -65,8 +65,9 @@
 	}
 
 	ul {
+		--menu-item-width: calc((100% - var(--spacer-width)) / 4);
 		display: grid;
-		grid-template-columns: 1fr 1fr var(--spacer-width) 1fr 1fr;
+		grid-template-columns: var(--menu-item-width) var(--menu-item-width) var(--spacer-width) var(--menu-item-width) var(--menu-item-width);
 		justify-items: center;
 		margin: 0;
 		padding: 0;

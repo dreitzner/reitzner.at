@@ -6,6 +6,7 @@
 
 <style>
     footer {
+        /* TODO: not good on mobile */
         position: fixed;
         bottom: 0;
         right: 0;
