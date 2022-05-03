@@ -100,22 +100,30 @@
 		border-color: transparent transparent transparent var(--color-blue);
 	}
 
-	[aria-current] {
+	li {
 		position: relative;
-		display: inline-block;
 	}
-
-	[aria-current]::before {
+	li a::before {
 		position: absolute;
 		content: '';
 		width: 80%;
 		height: 5px;
 		background-color: #ffc107;
 		display: block;
-		top: -2px;
 		left: 10%;
+		top:0;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
+		transform: 
+			translateY(-20px)
+			scaleX(.2);
+		transition: transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	[aria-current]::before {
+		transform: 
+			translateY(-2px)
+			scaleX(0);
 	}
 
 	li a {
