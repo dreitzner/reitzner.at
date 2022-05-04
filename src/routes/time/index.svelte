@@ -1,72 +1,78 @@
 <script>
-	const haveAMoment = () => {
+	import { onMount } from "svelte";
+
+	let secName;
+	let secWed;
+	let minName;
+	let minWed;
+	let hourName;
+	let hourWed;
+	let dayName;
+	let dayWed;
+	let weekName;
+	let weekWed;
+	let monName;
+	let monWed;
+	let quaName;
+	let quaWed;
+	let yearName;
+	let yearWed;
+
+	onMount(async() => {
+		const moment = (await import('moment')).default;
+
 		const nameTime = moment('2009-09-09 12:00:00');
 		const weddingTime = moment('2009-09-12 15:00:00');
-		const timeObj = {};
-		window.setInterval(() => {
+		setInterval(() => {
 			const now = moment();
-			const newTimeObj = {
-				'#value__sec--name': now.diff(nameTime, 'seconds'),
-				'#value__sec--wedding': now.diff(weddingTime, 'seconds'),
-				'#value__min--name': now.diff(nameTime, 'minutes'),
-				'#value__min--wedding': now.diff(weddingTime, 'minutes'),
-				'#value__hour--name': now.diff(nameTime, 'hours'),
-				'#value__hour--wedding': now.diff(weddingTime, 'hours'),
-				'#value__day--name': now.diff(nameTime, 'days'),
-				'#value__day--wedding': now.diff(weddingTime, 'days'),
-				'#value__week--name': now.diff(nameTime, 'weeks'),
-				'#value__week--wedding': now.diff(weddingTime, 'weeks'),
-				'#value__mon--name': now.diff(nameTime, 'months'),
-				'#value__mon--wedding': now.diff(weddingTime, 'months'),
-				'#value__qua--name': Math.floor(now.diff(nameTime, 'months') / 3),
-				'#value__qua--wedding': Math.floor(now.diff(weddingTime, 'months') / 3),
-				'#value__year--name': now.diff(nameTime, 'years'),
-				'#value__year--wedding': now.diff(weddingTime, 'years')
-			};
-			for (const selector in newTimeObj) {
-				if (timeObj[selector] && timeObj[selector] === newTimeObj[selector]) return;
-				timeObj[selector] = newTimeObj[selector];
-				document.querySelector(selector).innerHTML = newTimeObj[selector];
-			}
+			secName = now.diff(nameTime, 'seconds'),
+			secWed = now.diff(weddingTime, 'seconds'),
+			minName = now.diff(nameTime, 'minutes'),
+			minWed = now.diff(weddingTime, 'minutes'),
+			hourName = now.diff(nameTime, 'hours'),
+			hourWed = now.diff(weddingTime, 'hours'),
+			dayName = now.diff(nameTime, 'days'),
+			dayWed = now.diff(weddingTime, 'days'),
+			weekName = now.diff(nameTime, 'weeks'),
+			weekWed = now.diff(weddingTime, 'weeks'),
+			monName = now.diff(nameTime, 'months'),
+			monWed = now.diff(weddingTime, 'months'),
+			quaName = Math.floor(now.diff(nameTime, 'months') / 3),
+			quaWed = Math.floor(now.diff(weddingTime, 'months') / 3),
+			yearName = now.diff(nameTime, 'years'),
+			yearWed = now.diff(weddingTime, 'years')
 		}, 1000);
-	};
+	})
 </script>
 
-<svelte:head>
-	<script
-		on:load={haveAMoment}
-		src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"></script>
-</svelte:head>
 <div class="grid">
-	<div id="empty-corner" />
-	<div id="heading__name">Gleichheißen</div>
-	<div id="heading__wedding">Hochzeit</div>
-	<div id="heading__sec">Sekunden</div>
-	<div id="value__sec--name" />
-	<div id="value__sec--wedding" />
-	<div id="heading__min">Minuten</div>
-	<div id="value__min--name" />
-	<div id="value__min--wedding" />
-	<div id="heading__hour">Stunden</div>
-	<div id="value__hour--name" />
-	<div id="value__hour--wedding" />
-	<div id="heading__day">Tage</div>
-	<div id="value__day--name" />
-	<div id="value__day--wedding" />
-	<div id="heading__week">Wochen</div>
-	<div id="value__week--name" />
-	<div id="value__week--wedding" />
-	<div id="heading__mon">Monate</div>
-	<div id="value__mon--name" />
-	<div id="value__mon--wedding" />
-	<div id="heading__qua">Quartale</div>
-	<div id="value__qua--name" />
-	<div id="value__qua--wedding" />
-	<div id="heading__year">Jahre</div>
-	<div id="value__year--name" />
-	<div id="value__year--wedding" />
+	<div></div>
+	<div>Gleichheißen</div>
+	<div>Hochzeit</div>
+	<div>Sekunden</div>
+	<div>{secName}</div>
+	<div>{secWed}</div>
+	<div>Minuten</div>
+	<div>{minName}</div>
+	<div>{minWed}</div>
+	<div>Stunden</div>
+	<div>{hourName}</div>
+	<div>{hourWed}</div>
+	<div>Tage</div>
+	<div>{dayName}</div>
+	<div>{dayWed}</div>
+	<div>Wochen</div>
+	<div>{weekName}</div>
+	<div>{weekWed}</div>
+	<div>Monate</div>
+	<div>{monName}</div>
+	<div>{monWed}</div>
+	<div>Quartale</div>
+	<div>{quaName}</div>
+	<div>{quaWed}</div>
+	<div>Jahre</div>
+	<div>{yearName}</div>
+	<div>{yearWed}</div>
 </div>
 
 <style>

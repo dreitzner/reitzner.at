@@ -38,5 +38,8 @@
   "type": "module",
   "volta": {
     "node": "16.13.2"
+  },
+  "dependencies": {
+    "moment": "^2.29.3"
   }
 }
