@@ -123,7 +123,7 @@
 	[aria-current]::before {
 		transform: 
 			translateY(-2px)
-			scaleX(0);
+			scaleX(1);
 	}
 
 	li a {
