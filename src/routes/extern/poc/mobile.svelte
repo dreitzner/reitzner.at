@@ -45,7 +45,7 @@
 		}
 	}
 
-    let lux = '?'
+	let lux = '?';
 	onMount(async () => {
 		// @ts-ignore
 		const battery = await navigator?.getBattery();
@@ -57,7 +57,7 @@
 		}
 
 		if ('AmbientLightSensor' in window) {
-            //@ts-ignore
+			//@ts-ignore
 			const sensor = new AmbientLightSensor();
 			sensor.addEventListener('reading', (event) => {
 				lux = sensor.illuminance;
@@ -84,7 +84,7 @@
 		<h1>Viel Spa&szlig; beim Ausprobieren</h1>
 		Nicht alle Funktionen sind in allen mobilen Browsern m&ouml;glich.
 		<br /> F&uuml;r eine ausf&uuml;hrliche Liste besuche
-		<a href="http://mobilehtml5.org/" target="_blank">diese Seite</a>.
+		<a href="http://mobilehtml5.org/" target="_blank" rel="noopener noreferrer">diese Seite</a>.
 	</header>
 	<section id="vibrate">
 		<h2>

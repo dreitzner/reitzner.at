@@ -1,5 +1,6 @@
 :root {
 	--color-blue: #0D47A1;
+	--color-yellow: #ffc107;
 	--nav-height: calc(5.5rem / 2)
 }
 
@@ -57,4 +58,16 @@ main .link {
 main .link.-pre:before {
     content: "\260D";
     padding-right: .3em
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }

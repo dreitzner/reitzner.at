@@ -10,7 +10,7 @@
 	{#each posts as post}
 		<li>
 			{#if post.url}
-				<a class="flex link" href={post.url} target="_blank">
+				<a class="flex link" href={post.url} target="_blank" rel="noopener noreferrer">
 					<img src={post.image} alt={post.title} />
 					<span>{getYear(post.date)}</span>
 					{post.title}

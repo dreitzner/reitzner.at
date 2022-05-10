@@ -4,12 +4,13 @@
 </script>
 
 <nav class="flex">
-	<a class="logo flex" href="/">
+	<a class="logo flex" aria-current={'/' === $page.url.pathname ? 'page' : undefined} href="/" title="home">
+		<span class="sr-only">Home</span>
 		<Wappen />
 	</a>
 	<ul>
 		<li>
-			<a aria-current={'/' === $page.url.pathname ? 'page' : undefined} href="/"> home </a>
+			<a rel="prefetch" aria-current={'/projects' === $page.url.pathname ? 'page' : undefined} href="/projects"> projects </a>
 		</li>
 		<li>
 			<a
@@ -120,7 +121,7 @@
 		transition: transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 
-	[aria-current]::before {
+	li a[aria-current]::before {
 		transform: 
 			translateY(-2px)
 			scaleX(1);
@@ -147,6 +148,24 @@
 		z-index: 1;
 		background-color: rgba(53, 53, 53, 0.53);
 	}
+
+	.logo[aria-current] {
+		animation: anmiationLogo 3.5s infinite;
+	}
+
+	@keyframes anmiationLogo {
+		0% { box-shadow: inset 0px 0px 0px var(--color-yellow); }
+		12% { box-shadow: inset 0px 0px 8px var(--color-yellow); }
+		17% { box-shadow: inset 0px 0px 10px var(--color-yellow); }
+		22% { box-shadow: inset 0px 0px 8px var(--color-yellow); }
+		34% { box-shadow: inset 0px 0px 0px var(--color-yellow); }
+		38% { box-shadow: inset 0px 0px 4px var(--color-yellow); }
+		42.5% { box-shadow: inset 0px 0px 5px var(--color-yellow); }
+		47% { box-shadow: inset 0px 0px 4px var(--color-yellow); }
+		51% { box-shadow: inset 0px 0px 0px var(--color-yellow); }
+		100% { box-shadow: inset 0px 0px 0px var(--color-yellow); }
+	}
+
 	.spacer {
 		width: var(--spacer-width);
 	}
