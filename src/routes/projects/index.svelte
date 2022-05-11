@@ -1,5 +1,13 @@
 <h1>Projekte an denen ich gearbeitet habe</h1>
 <section>
+	<h2>Open Source - Svelte (2019-heute)</h2>
+	<p>
+		Wenn es meine Zeit erlaubt, helfe ich gerne in Svelte Community aus. Angefangen bei beantworten von Fragen im Svelte Discord bis hin zum Review von Issues und Pull Requests.
+	</p>
+	<h3>Links</h3>
+	<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="link -pre"> Svelte </a>
+</section>
+<section>
 	<h2>Billa Plus Vorbestellservice (2021)</h2>
 	<p>
 		Von Grund auf neu entwickelt. Ziel war es ein API getriebens statisches Frontend zu entwickel. Wichtig war auch einen Admin Bereich für die Verwaltung der Produkte bereitzustellen.
