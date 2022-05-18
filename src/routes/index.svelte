@@ -11,7 +11,7 @@
 			<li>Dev Lead bei Emakina CEE mit einem Team von 15 Leuten</li>
 			<li>Musiker</li>
 			<li>Blogger</li>
-			<li>Gründer von Svelte Society Austria</li>
+			<li>Gründer von <a href="https://austria.sveltesociety.dev/">Svelte Society Austria</a></li>
 		</ul>
 		<p>Ing. Domenik Reitzner</p>
 	</div>
