@@ -1,0 +1,10 @@
+<script lang="ts">
+	import ItemList from '$lib/components/ItemList.svelte';
+	import type {Talk} from 'src/global'
+	export let talks: Talk[];
+
+</script>
+
+<h1>All my talks/podcasts</h1>
+
+<ItemList items={talks} />

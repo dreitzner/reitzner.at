@@ -60,6 +60,10 @@ main .link.-pre:before {
     padding-right: .3em
 }
 
+main .link + .link {
+	margin-left: 1rem;
+}
+
 .sr-only {
 	position: absolute;
 	width: 1px;

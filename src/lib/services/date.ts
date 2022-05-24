@@ -1,0 +1,1 @@
+export const getDateFromString = (date: string): number => (new Date(date)).getUTCFullYear()
