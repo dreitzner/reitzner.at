@@ -28,6 +28,10 @@ export const talks: Talk[] = [
                 name: 'Tailwind',
                 url: 'https://tailwindcss.com/',
             },
+            {
+                name: 'Svackages',
+                url: 'https://github.com/svackages',
+            },
         ],
     },
 ];
