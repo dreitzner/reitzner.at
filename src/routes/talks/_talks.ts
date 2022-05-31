@@ -59,6 +59,30 @@ export const talks: Talk[] = [
         ],
     },
     {
+        title: 'SvelteKit and the dawn of serverless – Domenik Reitzner @TechTalk Days 2021',
+        description: `Domenik Reitzner von Emakina CEE zeigt in seinem devjobs.at TechTalk die Vorteile von SvelteKit sowie serverless und demonstriert diese anhand von Beispielen.`,
+        date: '2021-07-05',
+        slug: '/talks/2021-07-sveltkit-and-the-dawn-of-serverless',
+        assets: [
+            {
+                name: 'Video',
+                url: 'https://youtu.be/Z_H5g2NR080',
+            },
+        ],
+    },
+    {
+        title: 'TechLead-Story: Domenik Reitzner, Development Lead von Emakina CEE',
+        description: `Der Development Lead von Emakina CEE Domenik Reitzner gibt im Interview Einblicke über die Zusammenstellung der Teams, das Recruiting, die Lernkultur – Technik und Freizeit betreffend – im Unternehmen, sowie die Herangehensweise an die Projekte.`,
+        date: '2021-07-12',
+        slug: '/talks/2021-07-tech-lead-story',
+        assets: [
+            {
+                name: 'Video',
+                url: 'https://youtu.be/xFxVuZgb1AM',
+            },
+        ],
+    },
+    {
         title: 'Webrush Episode 83: Adventcalendar with Svelte - Domenik Reitzner',
         description: `Craig and John talk with Domenik Reitzner about Svelte. Can you write less code and build boilerplate-free components using HTML, CSS, and Javascript? What about the lack of cli? What is it really like developing with Svelte and why might someone not want to use Svelte?`,
         date: '2020-05-12',

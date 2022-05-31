@@ -35,27 +35,6 @@
 		>
 	</li>
 </ul>
-<h2>Videos</h2>
-<ul>
-	<li>
-		<a
-			class="link -pre"
-			href="https://youtu.be/Z_H5g2NR080"
-			target="_blank"
-			rel="noopener noreferrer"
-			>SvelteKit and the dawn of serverless - Domenik Reitzner @TechTalk Days 2021</a
-		>
-	</li>
-	<li>
-		<a
-			class="link -pre"
-			href="https://youtu.be/xFxVuZgb1AM"
-			target="_blank"
-			rel="noopener noreferrer"
-			>TechLead-Story: Domenik Reitzner, Development Lead von Emakina CEE</a
-		>
-	</li>
-</ul>
 
 <style>
 	ul {
