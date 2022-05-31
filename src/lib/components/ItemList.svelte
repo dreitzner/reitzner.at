@@ -7,10 +7,12 @@
 		slug: string;
 	}[]
 
+	const _items = items.filter(({date}) => new Date(date) < new Date())
+
 	const getYear = (dateString) => new Date(dateString).getFullYear();
 </script>
 <ul>
-	{#each items as {url, image, title, date, slug}}
+	{#each _items as {url, image, title, date, slug}}
 		<li>
 			{#if url}
 				<a class="flex link" href={url} target="_blank" rel="noopener noreferrer">

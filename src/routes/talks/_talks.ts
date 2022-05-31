@@ -34,4 +34,40 @@ export const talks: Talk[] = [
             },
         ],
     },
+    {
+        title: 'Svelte Radio Episode 38: SvelteKit in Production with Domenik Reitzner',
+        description: `This week we talk with Domenik Reitzner about a project they've built and launched using SvelteKit.`,
+        date: '2022-04-08',
+        slug: '/talks/2022-04-svelte-radio-38',
+        assets: [
+            {
+                name: 'Podcast',
+                url: 'https://www.svelteradio.com/episodes/sveltekit-in-production-with-domenik-reitzner',
+            },
+        ],
+    },
+    {
+        title: 'Webrush Episode 170: Building a Web App with SvelteKit with Domenik Reitzner',
+        description: `Domenik Reitzner returns to talk about his experiences building an app with SvelteKit. How did Svelte help meet their goals for the app? What went wrong with the project? How much overhead did TypeScript add? What other technologies did they use?`,
+        date: '2022-02-10',
+        slug: '/talks/2022-02-webrush-170',
+        assets: [
+            {
+                name: 'Podcast',
+                url: 'https://webrush.io/episodes/episode-170-building-a-web-app-with-sveltekit-with-domenik-reitzner',
+            },
+        ],
+    },
+    {
+        title: 'Webrush Episode 83: Adventcalendar with Svelte - Domenik Reitzner',
+        description: `Craig and John talk with Domenik Reitzner about Svelte. Can you write less code and build boilerplate-free components using HTML, CSS, and Javascript? What about the lack of cli? What is it really like developing with Svelte and why might someone not want to use Svelte?`,
+        date: '2020-05-12',
+        slug: '/talks/2020-05-webrush-83',
+        assets: [
+            {
+                name: 'Podcast',
+                url: 'https://webrush.io/episodes/episode-83-online-store-with-svelte-domenik-reitzner',
+            },
+        ],
+    },
 ];

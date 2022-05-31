@@ -2,6 +2,7 @@
 	import { getDateFromString } from '$lib/services/date';
 	import type { Talk } from 'src/global';
 	export let talk: Talk;
+	const hasRelAndTarget = (url: string) => url.startsWith('http');
 </script>
 
 <img src="/img{talk.slug}-header.jpg" alt="header {talk.title}" />
@@ -11,8 +12,13 @@
 
 {#if talk.assets.length}
 	<h2>Resources</h2>
-	{#each talk.assets as asset}
-		<a class="link -pre" href={asset.url}>{asset.name}</a>
+	{#each talk.assets as { url, name }}
+		<a
+			class="link -pre"
+			href={url}
+			rel={hasRelAndTarget(url) ? 'noopener noreferrer' : null}
+			target={hasRelAndTarget(url) ? '_blank' : null}>{name}</a
+		>
 	{/each}
 {/if}
 

@@ -5,6 +5,6 @@
 
 </script>
 
-<h1>All my talks/podcasts</h1>
+<h1>Alle meine Talks und Podcasts</h1>
 
 <ItemList items={talks} />

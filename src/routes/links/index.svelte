@@ -1,40 +1,37 @@
 <h1>Links</h1>
 <ul>
-	<li><a class="link -pre" href="https://github.com/dreitzner">github</a></li>
-	<li><a class="link -pre" href="https://twitter.com/reitznerdomenik">twitter</a></li>
-	<li><a class="link -pre" href="https://dev.to/dreitzner">dev.to</a></li>
-	<li><a class="link -pre" href="https://www.linkedin.com/in/reitznerdomenik/">LinkedIn</a></li>
+	<li><a class="link -pre" href="/talks">Alle meine Talks und Podcasts</a></li>
+	<li>
+		<a
+			class="link -pre"
+			href="https://github.com/dreitzner"
+			target="_blank"
+			rel="noopener noreferrer">github</a
+		>
+	</li>
+	<li>
+		<a
+			class="link -pre"
+			href="https://twitter.com/reitznerdomenik"
+			target="_blank"
+			rel="noopener noreferrer">twitter</a
+		>
+	</li>
+	<li>
+		<a class="link -pre" href="https://dev.to/dreitzner" target="_blank" rel="noopener noreferrer"
+			>dev.to</a
+		>
+	</li>
+	<li>
+		<a
+			class="link -pre"
+			href="https://www.linkedin.com/in/reitznerdomenik/"
+			target="_blank"
+			rel="noopener noreferrer">LinkedIn</a
+		>
+	</li>
 	<li>
 		<a class="link -pre" href="/public/Lebenslauf.pdf" target="_blank" id="Lebenslauf">Lebenslauf</a
-		>
-	</li>
-</ul>
-<h2>Podcasts</h2>
-<ul>
-	<li>
-		<a
-			class="link -pre"
-			href="https://www.svelteradio.com/episodes/sveltekit-in-production-with-domenik-reitzner"
-			target="_blank"
-			rel="noopener noreferrer"
-			>Svelte Radio Episode 38: SvelteKit in Production with Domenik Reitzner</a
-		>
-	</li>
-	<li>
-		<a
-			class="link -pre"
-			href="https://webrush.io/episodes/episode-170-building-a-web-app-with-sveltekit-with-domenik-reitzner"
-			target="_blank"
-			rel="noopener noreferrer"
-			>Webrush Episode 170: Building a Web App with SvelteKit with Domenik Reitzner</a
-		>
-	</li>
-	<li>
-		<a
-			class="link -pre"
-			href="https://webrush.io/episodes/episode-83-online-store-with-svelte-domenik-reitzner"
-			target="_blank"
-			rel="noopener noreferrer">Webrush Episode 83: Adventcalendar with Svelte - Domenik Reitzner</a
 		>
 	</li>
 </ul>
