@@ -27,7 +27,7 @@
 	<title>reitzner.at - {title}</title>
 	<meta property="og:title" content="reitzner.at - {title}" />
 	<meta property="og:url" content={href} />
-	<meta property="og:image" content="https://reitzner.at/img/og/{headerImg}>" />
+	<meta property="og:image" content="https://reitzner.at/img/og/{headerImg}.jpg" />
 </svelte:head>
 
 <Nav />
