@@ -9,7 +9,7 @@
 
 	const _items = items.filter(({date}) => new Date(date) < new Date())
 
-	const getYear = (dateString) => new Date(dateString).getFullYear();
+	const getYear = (dateString: string) => new Date(dateString).getFullYear();
 </script>
 <ul>
 	{#each _items as {url, image, title, date, slug}}

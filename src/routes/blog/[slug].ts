@@ -1,5 +1,5 @@
 import posts from './_posts.js';
-import type { RequestHandler } from '.svelte-kit/types/src/routes/blog/[slug]';
+import type { RequestHandler } from './__types/[slug]';
 
 export const get: RequestHandler = async (req) => {
 	const { slug } = req.params;

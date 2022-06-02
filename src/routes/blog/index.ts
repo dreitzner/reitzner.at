@@ -1,7 +1,7 @@
 import posts from './_posts';
 import devTo from './_devTo';
 
-import type { RequestHandler } from '.svelte-kit/types/src/routes/blog/index';
+import type { RequestHandler } from './__types/index';
 
 const internal = posts.map(post => {
 	return {

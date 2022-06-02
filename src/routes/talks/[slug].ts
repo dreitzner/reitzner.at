@@ -1,4 +1,4 @@
-import type { RequestHandler } from '.svelte-kit/types/src/routes/talks/[slug]'
+import type { RequestHandler } from './__types/[slug]'
 import { talks } from './_talks';
 
 

@@ -1,5 +1,12 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
+
+	interface Battery {
+		charging: boolean;
+		chargingTime: number;
+		dischargingTime: number;
+		level: number;
+	}
 
 	let vibrateArr = [];
 	let vibrateValue;
@@ -21,7 +28,7 @@
 	let batteryStatus;
 	let batteryIco = 'fa-battery-full';
 
-	function batteryChange(battery) {
+	function batteryChange(battery: Battery) {
 		batteryLevel = battery.level * 100;
 
 		batteryStatus = battery.charging
