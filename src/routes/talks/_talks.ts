@@ -14,7 +14,7 @@ export const talks: Talk[] = [
         assets: [
             {
                 name: 'Slides',
-                url: 'https://docs.google.com/presentation/d/1FmNja8DkBYFcVzZY29_vCgMzOGtC_s2nuMrHSsZhoMw/edit?usp=sharing',
+                url: 'https://drive.google.com/file/d/1iRdmgG9ecUtt1MGAF8tDE9HgHBujAh4s/view?usp=sharing',
             },
             {
                 name: 'Vorbestellservice',
