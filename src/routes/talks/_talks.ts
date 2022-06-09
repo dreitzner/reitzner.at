@@ -14,7 +14,7 @@ export const talks: Talk[] = [
         assets: [
             {
                 name: 'Slides',
-                url: '/public/talks/',
+                url: '/public/talks/2022-06-we-are-developers.ppsx',
             },
             {
                 name: 'Vorbestellservice',
