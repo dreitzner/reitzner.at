@@ -14,7 +14,7 @@ export const talks: Talk[] = [
         assets: [
             {
                 name: 'Slides',
-                url: '/public/talks/2022-06-we-are-developers.ppsx',
+                url: 'https://docs.google.com/presentation/d/1FmNja8DkBYFcVzZY29_vCgMzOGtC_s2nuMrHSsZhoMw/edit?usp=sharing',
             },
             {
                 name: 'Vorbestellservice',
