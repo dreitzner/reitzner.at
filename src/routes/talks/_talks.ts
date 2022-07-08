@@ -3,6 +3,38 @@ import type { Talk } from "src/global";
 
 export const talks: Talk[] = [
     {
+        title: 'Svackage - Svelte package inception with turborepo',
+        description: `In this live coding experiment, I talked about SvelteKit, the use of monorepos in combination with turborepo and how you can use SvelteKit to generate your packages that can be used inside your monorepo.`,
+        date: '2022-07-04',
+        slug: '/talks/2022-07-svienna',
+        assets: [
+            {
+                name: 'Video',
+                url: 'https://youtu.be/CjtlKDDJAf0',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: 'PNPM',
+                url: 'https://pnpm.io/',
+            },
+            {
+                name: 'turborepo',
+                url: 'https://turborepo.org/',
+            },
+            {
+                name: 'Svackages',
+                url: 'https://github.com/svackages',
+            },
+        ],
+    },
+    {
         title: 'How to build a preorder service with SvelteKit in 8 weeks',
         description: `I'll talk about how we build a preorder service for Billa PLUS (part of REWE group) as a team of nine, from 4 countries, in 8 weeks.
         The main focus will be on how we build out the Frontend with SvelteKit and tailwind. We connected the frontend to a .NET 5 backend running inside of docker.
