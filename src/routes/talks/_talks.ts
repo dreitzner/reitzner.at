@@ -13,6 +13,10 @@ export const talks: Talk[] = [
         slug: '/talks/2022-06-we-are-developers',
         assets: [
             {
+                name: 'Video',
+                url: 'https://youtu.be/VnAUOWzaCh0',
+            },
+            {
                 name: 'Slides',
                 url: 'https://drive.google.com/file/d/1iRdmgG9ecUtt1MGAF8tDE9HgHBujAh4s/view?usp=sharing',
             },
