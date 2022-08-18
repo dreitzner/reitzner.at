@@ -1,19 +1,7 @@
-<script context="module">
-	/** @type {import('@sveltejs/kit').Load} */
-	export function load({ error, status }) {
-		return {
-			props: {
-				status,
-				error,
-			}
-		};
-	}
-</script>
-
 <script>
-	export let error;
 	export let status;
 	import { dev } from '$app/env';
+	import { page } from '$app/stores';
 </script>
 
 <style>
@@ -42,10 +30,10 @@
 	<title>reitzner.at - {status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<h1>{$page.status}</h1>
 
-<p>{error.message}</p>
+<p>{$page.error.message}</p>
 
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
+{#if dev && $page.error.stack}
+	<pre>{$page.error.stack}</pre>
 {/if}

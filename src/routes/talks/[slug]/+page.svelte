@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { getDateFromString } from '$lib/services/date';
 	import type { Talk } from 'src/global';
-	export let talk: Talk;
+	export let data: {talk: Talk};
 	const hasRelAndTarget = (url: string) => url.startsWith('http');
 </script>
 
-<img src="/img{talk.slug}-header.jpg" alt="header {talk.title}" />
+<img src="/img{data.talk.slug}-header.jpg" alt="header {data.talk.title}" />
 
-<h1>{talk.title} ({getDateFromString(talk.date)})</h1>
-<p>{talk.description}</p>
+<h1>{data.talk.title} ({getDateFromString(data.talk.date)})</h1>
+<p>{data.talk.description}</p>
 
-{#if talk.assets.length}
+{#if data.talk.assets.length}
 	<h2>Resources</h2>
-	{#each talk.assets as { url, name }}
+	{#each data.talk.assets as { url, name }}
 		<a
 			class="link -pre"
 			href={url}

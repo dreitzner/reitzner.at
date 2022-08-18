@@ -1,8 +1,8 @@
 <script>
 	import ItemList from '$lib/components/ItemList.svelte';
-	export let posts;
+	export let data;
 </script>
 
 <h1>Blog posts</h1>
 
-<ItemList items={posts} />
+<ItemList items={data.posts} />

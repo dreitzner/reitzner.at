@@ -2,11 +2,11 @@
   "name": "reitzner.at",
   "version": "0.0.2",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "vite dev",
     "prebuild": "npm run generate:devTo",
-    "build": "svelte-kit build",
+    "build": "vite build",
+    "preview": "vite preview",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -38,6 +38,6 @@
     "node": "16.13.2"
   },
   "dependencies": {
-    "moment": "^2.29.3"
+    "moment": "^2.29.4"
   }
 }

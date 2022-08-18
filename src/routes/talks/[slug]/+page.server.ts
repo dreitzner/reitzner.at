@@ -1,17 +1,13 @@
-import type { RequestHandler } from './__types/[slug]'
-import { talks } from './_talks';
+import { error } from '@sveltejs/kit';
+import type { PageServerLoad } from '../$types'
+import { talks } from '../_talks';
 
 
-export const get: RequestHandler = async ({ params }) => {
+export const load: PageServerLoad = async ({ params }) => {
 	const { slug } = params;
 	const talk = talks.find(talk => talk.slug.endsWith(slug));
 	if (talk) {
-		return {
-			body: { talk }
-		};
+		return { talk };
 	}
-	return {
-		status: 404,
-		body: 'Slug not found'
-	}
-};
+	throw error(404, 'Slug not found');
+}

@@ -1,7 +1,7 @@
 import posts from './_posts';
 import devTo from './_devTo';
 
-import type { RequestHandler } from './__types/index';
+import type { PageServerLoad } from './$types';
 
 const internal = posts.map(post => {
 	return {
@@ -14,7 +14,7 @@ const internal = posts.map(post => {
 
 const date2Number = (string: string) => (new Date(string)).getTime();
 
-export const get: RequestHandler = () => {
+export const load: PageServerLoad = () => {
 	const posts = [
 		...internal,
 		...devTo,
@@ -22,7 +22,5 @@ export const get: RequestHandler = () => {
 
 	posts.sort((a, b) => date2Number(b.date) - date2Number(a.date));
 
-	return {
-		body: { posts },
-	};
+	return { posts };
 };

@@ -1,6 +1,16 @@
 <script>
-	export let post;
+	export let data;
 </script>
+
+<h1>{data.post.title}</h1>
+
+<div class="content">
+	{@html data.post.html}
+
+	<div class="back">
+		<a class="link -pre" href="/blog">Alle Blog posts</a>
+	</div>
+</div>
 
 <style>
 	/*
@@ -17,7 +27,7 @@
 	}
 	.content :global(pre) {
 		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
+		box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
 		padding: 0.5em;
 		border-radius: 2px;
 		overflow-x: auto;
@@ -31,19 +41,9 @@
 	}
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
-    }
-    
-    .back {
-        padding: 2em 0;
-    }
+	}
+
+	.back {
+		padding: 2em 0;
+	}
 </style>
-
-<h1>{post.title}</h1>
-
-<div class='content'>
-	{@html post.html}
-
-    <div class="back">
-        <a class="link -pre" href="/blog">Alle Blog posts</a>
-    </div>
-</div>

@@ -1,3 +1,8 @@
+<script>
+	export let data;
+	export let errors;
+</script>
+
 <h1>Herzlich willkommen auf reitzner.at</h1>
 
 <div class="flex">

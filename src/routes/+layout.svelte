@@ -1,36 +1,19 @@
-<script context="module">
-	const titleFallback = 'Home';
+<script lang="ts">
+	import type { LayoutServerResponse } from './+layout.server';
 
-	export async function load({ url: { href, pathname } }) {
-		const firstUrlSegment = pathname.split('/')[1] || titleFallback;
-		const title = firstUrlSegment.slice(0, 1).toUpperCase() + firstUrlSegment.slice(1);
-		const headerImg = ['Music'].includes(title) ? title : titleFallback;
-		return {
-			props: {
-				title,
-				headerImg,
-				href
-			}
-		};
-	}
-</script>
-
-<script>
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	export let title = '';
-	export let headerImg;
-	export let href;
+	export let data: LayoutServerResponse;
 </script>
 
 <svelte:head>
-	<title>reitzner.at - {title}</title>
-	<meta property="og:title" content="reitzner.at - {title}" />
-	<meta property="og:url" content={href} />
-	<meta property="og:image" content="https://reitzner.at/img/og/{headerImg}.jpg" />
+	<title>reitzner.at - {data.title}</title>
+	<meta property="og:title" content="reitzner.at - {data.title}" />
+	<meta property="og:url" content={data.href} />
+	<meta property="og:image" content="https://reitzner.at/img/og/{data.headerImg}.jpg" />
 
-	<meta name="twitter:title" content="reitzner.at - {title}" />
-	<meta name="twitter:image" content="https://reitzner.at/img/og/{headerImg}.jpg" />
+	<meta name="twitter:title" content="reitzner.at - {data.title}" />
+	<meta name="twitter:image" content="https://reitzner.at/img/og/{data.headerImg}.jpg" />
 </svelte:head>
 
 <Nav />

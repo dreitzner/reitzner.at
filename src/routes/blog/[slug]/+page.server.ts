@@ -1,16 +1,12 @@
-import posts from './_posts.js';
-import type { RequestHandler } from './__types/[slug]';
+import posts from '../_posts.js';
+import type { PageServerLoad } from '../$types';
+import { error } from '@sveltejs/kit';
 
-export const get: RequestHandler = async (req) => {
-	const { slug } = req.params;
+export const load: PageServerLoad = async ({ params: { slug } }) => {
 	const post = posts.find(post => post.slug.endsWith(slug));
 	if (post) {
-		return {
-			body: { post }
-		};
+		return { post };
 	}
-	return {
-		status: 404,
-		body: 'Slug not found'
-	}
+
+	throw error(404, 'Slug not found')
 };

@@ -1,8 +1,6 @@
-import type { RequestHandler } from './__types/index'
+import type { PageServerLoad } from './$types'
 import { talks } from './_talks';
 
-export const get: RequestHandler = async () => {
-	return {
-		body: { talks },
-	};
+export const load: PageServerLoad = async () => {
+	return { talks };
 };
