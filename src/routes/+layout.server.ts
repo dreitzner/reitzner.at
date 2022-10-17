@@ -1,4 +1,4 @@
-import type { LayoutServerLoad } from ".svelte-kit/types/src/routes/$types";
+import type { LayoutServerLoad } from "./$types";
 export type LayoutServerResponse = {
 	title: string,
 	headerImg: string,

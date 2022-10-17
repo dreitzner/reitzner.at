@@ -1,6 +1,5 @@
 <script>
-	export let data;
-	export let errors;
+	const marriedDelta = new Date(new Date().getTime() - new Date('2009-09-12').getTime()).getFullYear() - 1970;
 </script>
 
 <h1>Herzlich willkommen auf reitzner.at</h1>
@@ -9,7 +8,7 @@
 	<div>
 		<h2>Ich bin...</h2>
 		<ul>
-			<li>seit mehr als <a href="/time">12 Jahren</a> glücklich verheiratet</li>
+			<li>seit mehr als <a href="/time">{marriedDelta} Jahren</a> glücklich verheiratet</li>
 			<li>Vater von vier tollen Kindern (zwei Jungs und zwei Mädls)</li>
 			<li>ausgebildeter Mechatroniker (Schwerpunkt Robotik)</li>
 			<li>ein Hobby-Webyist, der sein Hobby zum Beruf gemacht hat</li>
