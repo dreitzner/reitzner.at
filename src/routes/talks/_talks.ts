@@ -3,6 +3,31 @@ import type { Talk } from "src/global";
 
 export const talks: Talk[] = [
     {
+        title: 'The easy way - an introduction to Sveltekit',
+        description: `In this talk, I present the story of Franz and how he found his way to Svelte.
+        There is also a nice demo of the SvelteKit Starter App.`,
+        date: '2022-10-24',
+        slug: '/talks/2022-10-svienna',
+        assets: [
+            // {
+            //     name: 'Video',
+            //     url: '',
+            // },
+            {
+                name: 'Slides',
+                url: 'https://drive.google.com/file/d/1_E2_X4mbqhsMtTnJotwf3yD0dpl5NUQG/view?usp=sharing',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+        ],
+    },
+    {
         title: 'Svackage - Svelte package inception with turborepo',
         description: `In this live coding experiment, I talked about SvelteKit, the use of monorepos in combination with turborepo and how you can use SvelteKit to generate your packages that can be used inside your monorepo.`,
         date: '2022-07-04',

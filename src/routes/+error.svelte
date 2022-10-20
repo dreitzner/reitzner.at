@@ -33,7 +33,3 @@
 <h1>{$page.status}</h1>
 
 <p>{$page.error.message}</p>
-
-{#if dev && $page.error.stack}
-	<pre>{$page.error.stack}</pre>
-{/if}
