@@ -9,10 +9,10 @@ export const talks: Talk[] = [
         date: '2022-10-24',
         slug: '/talks/2022-10-svienna',
         assets: [
-            // {
-            //     name: 'Video',
-            //     url: '',
-            // },
+            {
+                name: 'Video',
+                url: 'https://youtu.be/t-LKRrNedps',
+            },
             {
                 name: 'Slides',
                 url: 'https://drive.google.com/file/d/1_E2_X4mbqhsMtTnJotwf3yD0dpl5NUQG/view?usp=sharing',
