@@ -1,6 +1,6 @@
 {
   "name": "reitzner.at",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite dev",
     "prebuild": "npm run generate:devTo",
@@ -31,14 +31,14 @@
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.9.4",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.3",
-    "vite": "^3.1.8"
+    "typescript": "^4.9.3"
   },
   "type": "module",
   "volta": {
     "node": "16.18.0"
   },
   "dependencies": {
+    "@svackages/sveltekit-hook-redirect": "^0.0.1",
     "moment": "^2.29.4"
   }
 }

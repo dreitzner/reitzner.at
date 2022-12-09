@@ -26,6 +26,7 @@ export const talks: Talk[] = [
                 url: 'https://kit.svelte.dev/',
             },
         ],
+        type: "talk",
     },
     {
         title: 'Svackage - Svelte package inception with turborepo',
@@ -58,6 +59,7 @@ export const talks: Talk[] = [
                 url: 'https://github.com/svackages',
             },
         ],
+        type: 'talk',
     },
     {
         title: 'How to build a preorder service with SvelteKit in 8 weeks',
@@ -94,6 +96,7 @@ export const talks: Talk[] = [
                 url: 'https://github.com/svackages',
             },
         ],
+        type: 'talk',
     },
     {
         title: 'Svelte Radio Episode 38: SvelteKit in Production with Domenik Reitzner',
@@ -106,6 +109,7 @@ export const talks: Talk[] = [
                 url: 'https://www.svelteradio.com/episodes/sveltekit-in-production-with-domenik-reitzner',
             },
         ],
+        type: 'podcast',
     },
     {
         title: 'Webrush Episode 170: Building a Web App with SvelteKit with Domenik Reitzner',
@@ -118,6 +122,7 @@ export const talks: Talk[] = [
                 url: 'https://webrush.io/episodes/episode-170-building-a-web-app-with-sveltekit-with-domenik-reitzner',
             },
         ],
+        type: 'podcast',
     },
     {
         title: 'SvelteKit and the dawn of serverless – Domenik Reitzner @TechTalk Days 2021',
@@ -130,6 +135,7 @@ export const talks: Talk[] = [
                 url: 'https://youtu.be/Z_H5g2NR080',
             },
         ],
+        type: 'talk',
     },
     {
         title: 'TechLead-Story: Domenik Reitzner, Development Lead von Emakina CEE',
@@ -142,6 +148,7 @@ export const talks: Talk[] = [
                 url: 'https://youtu.be/xFxVuZgb1AM',
             },
         ],
+        type: 'talk',
     },
     {
         title: 'Webrush Episode 83: Adventcalendar with Svelte - Domenik Reitzner',
@@ -154,5 +161,6 @@ export const talks: Talk[] = [
                 url: 'https://webrush.io/episodes/episode-83-online-store-with-svelte-domenik-reitzner',
             },
         ],
+        type: 'podcast',
     },
 ];

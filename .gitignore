@@ -7,5 +7,5 @@ node_modules
 .env.*
 !.env.example
 .vercel_build_output
-/src/routes/blog/_devTo.ts
+/src/lib/data/_devTo.ts
 .dccache

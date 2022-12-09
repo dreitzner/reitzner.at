@@ -34,7 +34,7 @@
 	<a href="https://www.svelteradio.com/episodes/sveltekit-in-production-with-domenik-reitzner" target="_blank" rel="noopener noreferrer" class="link -pre"> Podcast </a>
 </section>
 <section>
-	<h2>Billa Adventkalender (2019-heute)</h2>
+	<h2>Billa Adventkalender (2019-2021)</h2>
 	<p>
 		Von Grund auf neu entwickelt. Ziel war es einen Adventkalender in ansprechendem Design zu bauen. Die derzeitge Version wird als Micro-Frontend eingebunden.
 	</p>

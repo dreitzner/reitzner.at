@@ -26,9 +26,9 @@
 			<a
 				rel="prefetch"
 				aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}
-				href="/blog"
+				href="/content"
 			>
-				blog
+				content
 			</a>
 		</li>
 		<li>

@@ -10,7 +10,7 @@ import path from 'path';
  */
 const writeToPosts = async (name, data) => {
 	try {
-		const filePath = path.resolve(`./src/routes/blog/_${name}.ts`);
+		const filePath = path.resolve(`./src/lib/data/_${name}.ts`);
 		return await writeFile(filePath, data);
 	} catch (error) {
 		console.error(error);
@@ -32,7 +32,8 @@ const getDevToPosts = async () => {
 					url: article.url,
 					title: article.title,
 					image: article.cover_image,
-					date: article.created_at
+					date: article.created_at,
+					type: 'blog',
 				};
 			});
 			await writeToPosts('devTo', `export default ${JSON.stringify(articles, null, 2)}`);

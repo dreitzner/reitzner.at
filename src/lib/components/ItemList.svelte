@@ -1,18 +1,19 @@
 <script lang="ts">
-	export let items: {
-		url?: string;
-		image?: string;
-		title: string;
-		date: string;
-		slug: string;
-	}[]
+	import type { ContentFilter, SharedContent } from "src/global";
 
-	const _items = items.filter(({date}) => new Date(date) < new Date())
+
+	export let items: SharedContent[];
+
+	export let itemFilter: ContentFilter = 'all';
+
+	const _items = items.filter(({ date }) => new Date(date) < new Date());
 
 	const getYear = (dateString: string) => new Date(dateString).getFullYear();
 </script>
+
 <ul>
-	{#each _items as {url, image, title, date, slug}}
+	{#each _items as { url, image, title, date, slug, type }}
+		{#if itemFilter === 'all' || itemFilter === type}
 		<li>
 			{#if url}
 				<a class="flex link" href={url} target="_blank" rel="noopener noreferrer">
@@ -21,13 +22,14 @@
 					{title}
 				</a>
 			{:else}
-				<a rel="prefetch" class="flex link" href="{slug}">
+				<a rel="prefetch" class="flex link" href={slug}>
 					<img src="/img{slug}.jpg" alt={title} />
 					<span>{getYear(date)}</span>
 					{title}
 				</a>
 			{/if}
 		</li>
+		{/if}
 	{/each}
 </ul>
 
