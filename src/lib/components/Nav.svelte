@@ -1,21 +1,24 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	//  Broken somehow
+	// import { page } from '$app/stores';
 	import Wappen from '$lib/icons/Wappen.svelte';
+
+	export let pathname;
 </script>
 
 <nav class="flex">
-	<a class="logo flex" aria-current={'/' === $page.url.pathname ? 'page' : undefined} href="/" title="home">
+	<a class="logo flex" aria-current={'/' === pathname ? 'page' : undefined} href="/" title="home">
 		<span class="sr-only">Home</span>
 		<Wappen />
 	</a>
 	<ul>
 		<li>
-			<a rel="prefetch" aria-current={'/projects' === $page.url.pathname ? 'page' : undefined} href="/projects"> projects </a>
+			<a rel="prefetch" aria-current={'/projects' === pathname ? 'page' : undefined} href="/projects"> projects </a>
 		</li>
 		<li>
 			<a
 				rel="prefetch"
-				aria-current={'/music' === $page.url.pathname ? 'page' : undefined}
+				aria-current={'/music' === pathname ? 'page' : undefined}
 				href="/music"
 			>
 				music
@@ -25,7 +28,7 @@
 		<li>
 			<a
 				rel="prefetch"
-				aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}
+				aria-current={'/content' === pathname ? 'page' : undefined}
 				href="/content"
 			>
 				content
@@ -34,7 +37,7 @@
 		<li>
 			<a
 				rel="prefetch"
-				aria-current={$page.url.pathname.startsWith('/links') ? 'page' : undefined}
+				aria-current={'/links' === pathname ? 'page' : undefined}
 				href="/links"
 			>
 				links

@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { LayoutServerResponse } from './+layout.server';
-
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	export let data: LayoutServerResponse;
+	import type { LayoutData } from './$types';
+	export let data: LayoutData;
 </script>
 
 <svelte:head>
@@ -16,7 +15,7 @@
 	<meta name="twitter:image" content="https://reitzner.at/img/og/{data.headerImg}.jpg" />
 </svelte:head>
 
-<Nav />
+<Nav pathname={data.pathname} />
 
 <main>
 	<slot />
