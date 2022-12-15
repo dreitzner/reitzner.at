@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import ItemList from '$lib/components/ItemList.svelte';
 	import { contentFilters } from '$lib/data/filters';
 	import type { ContentFilter } from 'src/global';
