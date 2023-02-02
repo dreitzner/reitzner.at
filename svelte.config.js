@@ -10,7 +10,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: process.env.VERCEL_COMMIT_REF
+		adapter: process.env.VERCEL_GIT_COMMIT_REF
 			? adapterVercel({
 				edge: true,
 			})

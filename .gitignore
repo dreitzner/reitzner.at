@@ -6,6 +6,6 @@ node_modules
 .env
 .env.*
 !.env.example
-.vercel_build_output
+.vercel
 /src/lib/data/_devTo.ts
 .dccache
