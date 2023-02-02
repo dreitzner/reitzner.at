@@ -1,5 +1,4 @@
 // import adapter from '@sveltejs/adapter-auto';
-import { VERCEL_COMMIT_REF } from '$env/static/private';
 import adapterVercel from '@sveltejs/adapter-vercel';
 import adapterCloudflare from '@sveltejs/adapter-cloudflare';
 import preprocess from 'svelte-preprocess';
@@ -11,7 +10,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: VERCEL_COMMIT_REF
+		adapter: process.env.VERCEL_COMMIT_REF
 			? adapterVercel({
 				edge: true,
 			})
