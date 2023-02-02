@@ -3,7 +3,7 @@
 	// import { page } from '$app/stores';
 	import Wappen from '$lib/icons/Wappen.svelte';
 
-	export let pathname;
+	export let pathname: string;
 </script>
 
 <nav class="flex">

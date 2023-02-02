@@ -1,21 +1,69 @@
 <script>
 	import { onMount } from "svelte";
 
+	/**
+	 * @type {number}
+	 */
 	let secName;
+	/**
+	 * @type {number}
+	 */
 	let secWed;
+	/**
+	 * @type {number}
+	 */
 	let minName;
+	/**
+	 * @type {number}
+	 */
 	let minWed;
+	/**
+	 * @type {number}
+	 */
 	let hourName;
+	/**
+	 * @type {number}
+	 */
 	let hourWed;
+	/**
+	 * @type {number}
+	 */
 	let dayName;
+	/**
+	 * @type {number}
+	 */
 	let dayWed;
+	/**
+	 * @type {number}
+	 */
 	let weekName;
+	/**
+	 * @type {number}
+	 */
 	let weekWed;
+	/**
+	 * @type {number}
+	 */
 	let monName;
+	/**
+	 * @type {number}
+	 */
 	let monWed;
+	/**
+	 * @type {number}
+	 */
 	let quaName;
+	/**
+	 * @type {number}
+	 */
 	let quaWed;
+	/**
+	 * @type {number}
+	 */
 	let yearName;
+	/**
+	 * @type {number}
+	 */
 	let yearWed;
 
 	onMount(async() => {

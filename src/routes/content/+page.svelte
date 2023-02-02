@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ItemList from '$lib/components/ItemList.svelte';
 	import { contentFilters } from '$lib/data/filters';
-	import type { ContentFilter } from 'src/global';
+	import type { ContentFilter } from '../../global';
 	import type { PageData } from './$types';
 	export let data: PageData;
 
@@ -10,6 +10,7 @@
 
 <h1>my content</h1>
 <section>
+	<!-- Formaction? -->
 	{#each contentFilters as filter}
 		<input type="radio" class="sr-only" name="itemFilter" id={filter} value={filter} bind:group={itemFilter}>
 		<label for={filter}>{filter}</label>

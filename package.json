@@ -39,6 +39,7 @@
     "node": "18.14.0"
   },
   "dependencies": {
+    "@svackages/sveltekit-hook-redirect": "^0.0.1",
     "moment": "^2.29.4"
   }
 }
