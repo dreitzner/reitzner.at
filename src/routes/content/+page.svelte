@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ItemList from '$lib/components/ItemList.svelte';
+	import ItemList from './ItemList.svelte';
 	import { contentFilters } from '$lib/data/filters';
 	import type { ContentFilter } from '../../global';
 	import type { PageData } from './$types';

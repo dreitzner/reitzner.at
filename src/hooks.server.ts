@@ -1,17 +1,15 @@
-import { RedirectHook, type RegexRedirect } from "@svackages/sveltekit-hook-redirect";
+import { RedirectHook, type StringRedirects } from "@svackages/sveltekit-hook-redirect";
 import type { Handle } from "@sveltejs/kit";
 
-const matchers: RegexRedirect[] = [
-    {
-        fromMatcher: /^\/blog.*/,
+const redirects: StringRedirects = {
+    '/blog': {
         to: '/content',
-        code: 301,
+        code: 301
     },
-    {
-        fromMatcher: /^\/talks.*/,
+    '/talks': {
         to: '/content',
-        code: 301,
+        code: 301
     },
-]
+}
 
-export const handle: Handle = ({ event, resolve }) => RedirectHook({ event, resolve, matchers });
+export const handle: Handle = ({ event, resolve }) => RedirectHook({ event, resolve, redirects });
