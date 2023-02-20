@@ -11,14 +11,14 @@ export const talks: Talk[] = [
             //     name: 'Video',
             //     url: 'https://youtu.be/...',
             // },
-            // {
-            //     name: 'Slides',
-            //     url: 'https://drive.google.com/file/d/1_E2_X4mbqhsMtTnJotwf3yD0dpl5NUQG/view?usp=sharing',
-            // },
-            // {
-            //     name: 'Repo',
-            //     url: 'https://drive.google.com/file/d/1_E2_X4mbqhsMtTnJotwf3yD0dpl5NUQG/view?usp=sharing',
-            // },
+            {
+                name: 'Slides',
+                url: 'https://drive.google.com/file/d/15fYpv-SCQksO3caJpnsoxPHYsHtOeus8/view?usp=sharing',
+            },
+            {
+                name: 'Repo',
+                url: 'https://github.com/dreitzner/lets-have-a-dialog',
+            },
             {
                 name: 'Svelte',
                 url: 'https://svelte.dev/',
