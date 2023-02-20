@@ -1,6 +1,6 @@
 <h1>Links</h1>
 <ul>
-	<li><a class="link -pre" href="/talks">Alle meine Talks und Podcasts</a></li>
+	<li><a class="link -pre" href="/content">Alle meine Talks und Podcasts</a></li>
 	<li>
 		<a
 			class="link -pre"

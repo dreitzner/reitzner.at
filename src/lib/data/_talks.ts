@@ -1,7 +1,39 @@
-import type { Talk } from "src/global";
-
+import type { Talk } from "../../global";
 
 export const talks: Talk[] = [
+    {
+        title: 'Let\'s have a <dialog>',
+        description: `The topic of this talk was the <dialog> element. It has some nice accaccibility features baked in. We can use it with SvelteKit to enhance our UX by using the platform.`,
+        date: '2023-02-20',
+        slug: '/talks/2023-02-svienna',
+        assets: [
+            // {
+            //     name: 'Video',
+            //     url: 'https://youtu.be/...',
+            // },
+            // {
+            //     name: 'Slides',
+            //     url: 'https://drive.google.com/file/d/1_E2_X4mbqhsMtTnJotwf3yD0dpl5NUQG/view?usp=sharing',
+            // },
+            // {
+            //     name: 'Repo',
+            //     url: 'https://drive.google.com/file/d/1_E2_X4mbqhsMtTnJotwf3yD0dpl5NUQG/view?usp=sharing',
+            // },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: '<dialog> on mdn',
+                url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog',
+            },
+        ],
+        type: "talk",
+    },
     {
         title: 'The easy way - an introduction to Sveltekit',
         description: `In this talk, I present the story of Franz and how he found his way to Svelte.
