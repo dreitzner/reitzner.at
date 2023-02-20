@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getDateFromString } from '$lib/services/date';
-	import type { Talk } from 'src/global';
-	export let data: {talk: Talk};
+	import type { PageData } from './$types';
+	export let data: PageData;
 	const hasRelAndTarget = (url: string) => url.startsWith('http');
 </script>
 
@@ -23,7 +23,7 @@
 {/if}
 
 <div class="back">
-	<a class="link -pre" href="/talks">Alle Talks</a>
+	<a class="link -pre" href="/content">Alle Talks</a>
 </div>
 
 <style>
