@@ -7,10 +7,10 @@ export const talks: Talk[] = [
         date: '2023-02-20',
         slug: '/talks/2023-02-svienna',
         assets: [
-            // {
-            //     name: 'Video',
-            //     url: 'https://youtu.be/...',
-            // },
+            {
+                name: 'Video',
+                url: 'https://youtu.be/XkC29lskoM0',
+            },
             {
                 name: 'Slides',
                 url: 'https://drive.google.com/file/d/15fYpv-SCQksO3caJpnsoxPHYsHtOeus8/view?usp=sharing',
