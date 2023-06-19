@@ -2,6 +2,43 @@ import type { Talk } from "../../global";
 
 export const talks: Talk[] = [
     {
+        title: 'Progressive Enhancement with SvelteKit',
+        description: `I talked about progressive enhancement and how we can make our applications more robust. SvelteKit provides a lot of nice features out of the box `,
+        date: '2023-06-19',
+        slug: '/talks/2023-06-svienna',
+        assets: [
+            // {
+            //     name: 'Video',
+            //     url: 'https://youtu.be/XkC29lskoM0',
+            // },
+            {
+                name: 'Slides',
+                url: 'https://drive.google.com/file/d/1KHm3HNiMFiQ6Z1qXHULYuxmiFZXaO9kp/view?usp=sharing',
+            },
+            {
+                name: 'Repo',
+                url: 'https://github.com/dreitzner/progressive-todo',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: 'Svelte Snaps (by Rich Harris)',
+                url: 'https://sveltesnaps.vercel.app/',
+            },
+            {
+                name: 'Progressive Enhancement on mdn',
+                url: 'https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement?retiredLocale=de',
+            },
+        ],
+        type: "talk",
+    },
+    {
         title: 'Let\'s have a <dialog>',
         description: `The topic of this talk was the <dialog> element. It has some nice accaccibility features baked in. We can use it with SvelteKit to enhance our UX by using the platform.`,
         date: '2023-02-20',

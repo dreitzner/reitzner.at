@@ -1,12 +1,14 @@
 <script lang="ts">
-	import type { ContentFilter, SharedContent } from "src/global";
-
+	import type { ContentFilter, SharedContent } from 'src/global';
 
 	export let items: SharedContent[];
 
 	export let itemFilter: ContentFilter = 'all';
-
-	const _items = items.filter(({ date }) => new Date(date) < new Date());
+	
+	const tomorrow = new Date().getDate() + 1
+	const _items = items.filter(
+		({ date }) => new Date(date) < new Date(new Date().setDate(tomorrow))
+	);
 
 	const getYear = (dateString: string) => new Date(dateString).getFullYear();
 </script>
@@ -14,21 +16,21 @@
 <ul>
 	{#each _items as { url, image, title, date, slug, type }}
 		{#if itemFilter === 'all' || itemFilter === type}
-		<li>
-			{#if url}
-				<a class="flex link" href={url} target="_blank" rel="noopener noreferrer">
-					<img src={image} alt={title} />
-					<span>{getYear(date)}</span>
-					{title}
-				</a>
-			{:else}
-				<a rel="prefetch" class="flex link" href={slug}>
-					<img src="/img{slug}.jpg" alt={title} />
-					<span>{getYear(date)}</span>
-					{title}
-				</a>
-			{/if}
-		</li>
+			<li>
+				{#if url}
+					<a class="flex link" href={url} target="_blank" rel="noopener noreferrer">
+						<img src={image} alt={title} />
+						<span>{getYear(date)}</span>
+						{title}
+					</a>
+				{:else}
+					<a rel="prefetch" class="flex link" href={slug}>
+						<img src="/img{slug}.jpg" alt={title} />
+						<span>{getYear(date)}</span>
+						{title}
+					</a>
+				{/if}
+			</li>
 		{/if}
 	{/each}
 </ul>
