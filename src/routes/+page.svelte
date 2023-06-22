@@ -1,4 +1,5 @@
 <script>
+	import dr from '$lib/assets/dr.jpg';
 	const marriedDelta = new Date(new Date().getTime() - new Date('2009-09-12').getTime()).getFullYear() - 1970;
 </script>
 
@@ -19,7 +20,7 @@
 		</ul>
 		<p>Ing. Domenik Reitzner</p>
 	</div>
-	<img src="img/dr.jpg" alt="Domenik Reitzner" />
+	<img src={dr} alt="Domenik Reitzner" />
 </div>
 
 <style>
@@ -48,6 +49,7 @@
 	img {
 		align-self: flex-start;
 		max-width: 25%;
+		aspect-ratio: 4 / 5;
 	}
 
   a {
