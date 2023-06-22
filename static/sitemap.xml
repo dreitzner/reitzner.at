@@ -32,6 +32,16 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://reitzner.at/talks/2023-06-svienna</loc>
+    <lastmod>2023-06-19T12:39:41+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://reitzner.at/talks/2023-02-svienna</loc>
+    <lastmod>2023-02-12T12:39:41+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
     <loc>https://reitzner.at/talks/2022-10-svienna</loc>
     <lastmod>2023-02-12T12:39:41+00:00</lastmod>
     <priority>0.64</priority>
