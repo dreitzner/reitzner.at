@@ -3,14 +3,47 @@ import type { Talk } from "../../global";
 export const talks: Talk[] = [
     {
         title: 'Progressive Enhancement with SvelteKit',
+        description: `Is there a way to build your web app, so it runs even without JavaScript? With SvelteKit it is easy to progressively enhance your app so it will feel like an SPA, but will continue to function the worst conditions. By looking at an example to-do app, we can see the patterns that enable us to build robust applications with SvelteKit.`,
+        date: '2023-09-27',
+        slug: '/talks/2023-09-viennajs',
+        assets: [
+            {
+                name: 'Slides',
+                url: 'https://docs.google.com/presentation/d/141oACbTjUnnHw4rH4RXVQad5a8WaI-q2NTAOBjMk-WY/edit?usp=sharing',
+            },
+            {
+                name: 'Repo',
+                url: 'https://github.com/dreitzner/progressive-todo',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: 'Svelte Snaps (by Rich Harris)',
+                url: 'https://sveltesnaps.vercel.app/',
+            },
+            {
+                name: 'Progressive Enhancement on mdn',
+                url: 'https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement?retiredLocale=de',
+            },
+            {
+                name: 'ViennaJS',
+                url: 'https://viennajs.org/',
+            },
+        ],
+        type: "talk",
+    },
+    {
+        title: 'Progressive Enhancement with SvelteKit',
         description: `I talked about progressive enhancement and how we can make our applications more robust. SvelteKit provides a lot of nice features out of the box `,
         date: '2023-06-19',
         slug: '/talks/2023-06-svienna',
         assets: [
-            // {
-            //     name: 'Video',
-            //     url: 'https://youtu.be/XkC29lskoM0',
-            // },
             {
                 name: 'Slides',
                 url: 'https://drive.google.com/file/d/1KHm3HNiMFiQ6Z1qXHULYuxmiFZXaO9kp/view?usp=sharing',
