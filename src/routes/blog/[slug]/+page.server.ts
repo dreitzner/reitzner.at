@@ -8,5 +8,5 @@ export const load: PageServerLoad = async ({ params: { slug } }) => {
 		return { post };
 	}
 
-	throw error(404, 'Slug not found')
+	error(404, 'Slug not found');
 };
