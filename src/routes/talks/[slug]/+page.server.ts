@@ -9,5 +9,5 @@ export const load: PageServerLoad = async ({ params }) => {
 	if (talk) {
 		return { talk };
 	}
-	throw error(404, 'Slug not found');
+	error(404, 'Slug not found');
 }

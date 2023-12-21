@@ -28,7 +28,7 @@
 		<li>
 			<a
 				rel="prefetch"
-				aria-current={'/content' === pathname ? 'page' : undefined}
+				aria-current={( pathname.startsWith('/content') || pathname.startsWith('/talks/')) ? 'page' : undefined}
 				href="/content"
 			>
 				content

@@ -14,8 +14,13 @@
 			class="link -pre"
 			href="https://twitter.com/reitznerdomenik"
 			target="_blank"
-			rel="noopener noreferrer">twitter</a
+			rel="noopener noreferrer">twix (twitter / X)</a
 		>
+	</li>
+	<li>
+		<a class="link -pre" href="https://gravatar.com/dreitzner" target="_blank" rel="noopener noreferrer">
+			Gravatar Profile
+		</a>
 	</li>
 	<li>
 		<a class="link -pre" href="https://dev.to/dreitzner" target="_blank" rel="noopener noreferrer"
