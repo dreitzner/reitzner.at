@@ -8,4 +8,4 @@ Die Arbeiten im Studio sind schon abgeschlossen und in kürze könnt ihr in die 
 </div><br>
 <br>
 <a class="link -pre" href="https://docs.google.com/document/d/1_sU6a3e8tPKsFcndcaEiimEdJJ007xLXGJJcHAXqrOA/edit">Lyrics</a>
-<a class="link -pre" href="https://soundcloud.com/domenik-reitzner/love-grace-domenik-reitznert">Listen on soundcloud</a>
+<a class="link -pre" href="https://soundcloud.com/domenik-reitzner/love-grace-domenik-reitzner">Listen on soundcloud</a>
