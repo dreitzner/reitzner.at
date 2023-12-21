@@ -13,7 +13,7 @@
 			<li>Vater von vier tollen Kindern (zwei Jungs und zwei Mädls)</li>
 			<li>ausgebildeter Mechatroniker (Schwerpunkt Robotik)</li>
 			<li>ein Hobby-Webyist, der sein Hobby zum Beruf gemacht hat</li>
-			<li>Dev Lead bei Emakina CEE mit einem Team von 15 Leuten</li>
+			<li>Web Enthusiast @ <a href="https://woom.com" rel="noopener noreferer">woom</a></li>
 			<li>Musiker</li>
 			<li>Blogger</li>
 			<li>Gründer von <a href="https://austria.sveltesociety.dev/">Svelte Society Austria</a></li>
