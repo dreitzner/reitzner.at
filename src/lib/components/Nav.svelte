@@ -81,6 +81,7 @@
 		height: var(--nav-height);
 		position: relative;
 		list-style: none;
+		--tringle-width: 15px;
 	}
 	
 
@@ -92,16 +93,26 @@
 		border-style: solid;
 		position: absolute;
 		top: 0;
+		transition: scale .35s ease-out;
 	}
 	ul::before {
-		left: -7px;
-		border-width: 0 7px var(--nav-height) 0;
+		left: calc(-1 * var(--tringle-width));
+		border-width: 0 var(--tringle-width) var(--nav-height) 0;
 		border-color: transparent var(--color-blue) transparent transparent;
+		transform-origin: right;
 	}
 	ul::after {
-		right: -7px;
-		border-width: 0 0 var(--nav-height) 7px;
+		right: calc(-1 * var(--tringle-width));
+		border-width: 0 0 var(--nav-height) var(--tringle-width);
 		border-color: transparent transparent transparent var(--color-blue);
+		transform-origin: left;
+	}
+
+	ul:hover::before,
+	ul:focus-within::before,
+	ul:hover::after,
+	ul:focus-within::after {
+		scale: 1.25 1;
 	}
 
 	li {
@@ -112,22 +123,36 @@
 		content: '';
 		width: 80%;
 		height: 5px;
-		background-color: #ffc107;
+		background-color: var(--color-yellow);
 		display: block;
 		left: 10%;
 		top:0;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
-		transform: 
-			translateY(-20px)
-			scaleX(.2);
-		transition: transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		translate: 0 -20px;
+		scale: .2 1;
+		opacity: 1;
+		transition: translate .35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+			scale .35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+			opaacity .5s ease-in;
 	}
 
+	li a:focus, .logo:focus {
+		outline: 3px dashed var(--color-yellow);
+	}
+	li a:hover::before,
+	li a:focus::before {
+		opacity: 0.5;
+	}
+	li a:hover::before,
+	li a:focus::before,
 	li a[aria-current]::before {
-		transform: 
-			translateY(-2px)
-			scaleX(1);
+		
+		translate: 0 -2px;
+		scale: 1;
+	}
+	li a[aria-current]::before { 
+		opacity: 1;
 	}
 
 	li a {
