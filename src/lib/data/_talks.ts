@@ -2,6 +2,35 @@ import type { Talk } from "../../global";
 
 export const talks: Talk[] = [
     {
+        title: 'A brief history of prototyping',
+        description: `This talk is all about prototyping and how we got to the web we know today. It also shows how Svelte has a unique role in providing great playgrounds to get started.`,
+        date: '2024-01-22',
+        slug: '/talks/2024-01-svienna',
+        assets: [
+            {
+                name: 'Slides',
+                url: 'https://1drv.ms/p/c/061206b6a163fad0/EVXkGbTWjStBugNVButeJNYBbT5hcUO3TUVmIR2GlqBCOQ?e=s12LMw&nav=eyJzSWQiOjI1NiwiY0lkIjoxNTc3NDk5ODgzfQ',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: 'SvelteLab',
+                url: 'https://www.sveltelab.dev/',
+            },
+            {
+                name: 'Svienna',
+                url: 'https://austria.sveltesociety.dev/',
+            },
+        ],
+        type: "talk",
+    },
+    {
         title: 'Progressive Enhancement with SvelteKit',
         description: `Is there a way to build your web app, so it runs even without JavaScript? With SvelteKit it is easy to progressively enhance your app so it will feel like an SPA, but will continue to function the worst conditions. By looking at an example to-do app, we can see the patterns that enable us to build robust applications with SvelteKit.`,
         date: '2023-09-27',
