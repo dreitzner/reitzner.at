@@ -1,6 +1,5 @@
 <script>
 	export let status;
-	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 </script>
 
@@ -32,4 +31,6 @@
 
 <h1>{$page.status}</h1>
 
-<p>{$page.error.message}</p>
+<p>{$page.error?.message}</p>
+
+<a href="/" class="link">→ zurück zur Startseite</a>
