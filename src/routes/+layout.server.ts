@@ -1,5 +1,3 @@
-import type { LayoutServerLoad } from "./$types";
-
 const titleFallback = 'Home';
 
 export const load = (async ({ url: { href, pathname } }) => {
@@ -12,4 +10,4 @@ export const load = (async ({ url: { href, pathname } }) => {
 		href,
 		pathname,
 	};
-}) satisfies LayoutServerLoad
+})
