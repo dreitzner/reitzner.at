@@ -80,8 +80,15 @@
 		grid-template-columns: repeat(3, minmax(min-content, max-content));
 		grid-auto-rows: auto;
 		text-align: right;
-	}
-	.grid div {
-		padding: 10px;
+		font-size: 1.125rem;
+		justify-content: center;
+		div {
+			padding: 0.675rem;
+
+			&:nth-child(-n + 3),
+			&:nth-child(3n + 1) {
+				font-weight: bold;
+			}
+		}
 	}
 </style>
