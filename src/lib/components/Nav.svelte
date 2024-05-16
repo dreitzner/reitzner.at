@@ -3,11 +3,16 @@
 	// import { page } from '$app/stores';
 	import Wappen from '$lib/icons/Wappen.svelte';
 
-	export let pathname: string;
+	const { pathname } = $props() as { pathname: string };
 </script>
 
 <nav class="flex">
-	<a class="logo flex" aria-current={'/' === pathname ? 'page' : undefined} href="/" title="home">
+	<a
+		class="logo flex"
+		aria-current={'/' === pathname ? 'page' : undefined}
+		href="/"
+		title="home"
+	>
 		<span class="sr-only">Home</span>
 		<Wappen />
 	</a>
@@ -22,7 +27,11 @@
 			</a>
 		</li>
 		<li>
-			<a rel="prefetch" aria-current={'/music' === pathname ? 'page' : undefined} href="/music">
+			<a
+				rel="prefetch"
+				aria-current={'/music' === pathname ? 'page' : undefined}
+				href="/music"
+			>
 				music
 			</a>
 		</li>
@@ -39,7 +48,11 @@
 			</a>
 		</li>
 		<li>
-			<a rel="prefetch" aria-current={'/links' === pathname ? 'page' : undefined} href="/links">
+			<a
+				rel="prefetch"
+				aria-current={'/links' === pathname ? 'page' : undefined}
+				href="/links"
+			>
 				links
 			</a>
 		</li>
@@ -71,9 +84,9 @@
 	ul {
 		--menu-item-width: calc((100% - var(--spacer-width)) / 4);
 		display: grid;
-		grid-template-columns: var(--menu-item-width) var(--menu-item-width) var(--spacer-width) var(
-				--menu-item-width
-			) var(--menu-item-width);
+		grid-template-columns:
+			var(--menu-item-width) var(--menu-item-width) var(--spacer-width) var(--menu-item-width)
+			var(--menu-item-width);
 		justify-items: center;
 		margin: 0;
 		padding: 0;
@@ -109,12 +122,12 @@
 		transform-origin: left;
 	}
 
-	ul:hover::before,
+	/* ul:hover::before,
 	ul:focus-within::before,
 	ul:hover::after,
 	ul:focus-within::after {
 		scale: 1.25 1;
-	}
+	} */
 
 	li {
 		position: relative;

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-	export let data: PageData;
+	const { data } = $props();
 </script>
 
 <h1>{data.post.title}</h1>
@@ -9,7 +8,10 @@
 	{@html data.post.html}
 
 	<div class="back">
-		<a class="link -pre" href="/content">Alle Blog posts</a>
+		<a
+			class="link -pre"
+			href="/content">Alle Blog posts</a
+		>
 	</div>
 </div>
 

@@ -1,8 +1,7 @@
 <script lang="ts">
 	import ItemList from './ItemList.svelte';
 	import { contentFilters } from '$lib/data/filters';
-	import type { PageData } from './$types';
-	export let data: PageData;
+	const { data } = $props();
 </script>
 
 <h1>my content</h1>
@@ -54,7 +53,9 @@
 		left: 0;
 		top: 0;
 		translate: 0 -100%;
-		transition: opacity .3s, translate .3s;
+		transition:
+			opacity 0.3s,
+			translate 0.3s;
 	}
 
 	a:focus,

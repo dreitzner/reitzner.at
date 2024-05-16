@@ -24,6 +24,7 @@ export type SharedContent = ({
     date: string;
     slug: string;
     type: ContentTypes;
+    visible: boolean;
 } | {
     url: string;
     title: string;
@@ -31,4 +32,5 @@ export type SharedContent = ({
     date: string;
     slug?: undefined;
     type: ContentTypes;
+    visible: boolean;
 })

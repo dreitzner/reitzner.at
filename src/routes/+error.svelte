@@ -1,10 +1,24 @@
-<script>
-	export let status;
+<script lang="ts">
+	const { status } = $props();
 	import { page } from '$app/stores';
 </script>
 
+<svelte:head>
+	<title>reitzner.at - {status}</title>
+</svelte:head>
+
+<h1>{$page.status}</h1>
+
+<p>{$page.error?.message}</p>
+
+<a
+	href="/"
+	class="link">→ zurück zur Startseite</a
+>
+
 <style>
-	h1, p {
+	h1,
+	p {
 		margin: 0 auto;
 	}
 
@@ -24,13 +38,3 @@
 		}
 	}
 </style>
-
-<svelte:head>
-	<title>reitzner.at - {status}</title>
-</svelte:head>
-
-<h1>{$page.status}</h1>
-
-<p>{$page.error?.message}</p>
-
-<a href="/" class="link">→ zurück zur Startseite</a>

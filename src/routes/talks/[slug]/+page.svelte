@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { getDateFromString } from '$lib/services/date';
-	import type { PageData } from './$types';
-	export let data: PageData;
+	const { data } = $props();
 	const hasRelAndTarget = (url: string) => url.startsWith('http');
 </script>
 
-<img src="/img{data.talk.slug}-header.jpg" alt="header {data.talk.title}" />
+<img
+	src="/img{data.talk.slug}-header.jpg"
+	alt="header {data.talk.title}"
+/>
 
 <h1>{data.talk.title} ({getDateFromString(data.talk.date)})</h1>
 <p>{data.talk.description}</p>
@@ -23,7 +25,10 @@
 {/if}
 
 <div class="back">
-	<a class="link -pre" href="/content">Alle Talks</a>
+	<a
+		class="link -pre"
+		href="/content">Alle Talks</a
+	>
 </div>
 
 <style>

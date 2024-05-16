@@ -1,28 +1,46 @@
 <script lang="ts">
-	import type { SharedContent } from "../../../global";
+	import { fade } from 'svelte/transition';
+	import type { SharedContent } from '../../../global';
 
-	export let items: SharedContent[];
+	const { items }: { items: SharedContent[] } = $props();
 
 	const getYear = (dateString: string) => new Date(dateString).getFullYear();
 </script>
 
 <ul>
-	{#each items as { url, image, title, date, slug, type }}
-		<li>
-			{#if url}
-				<a class="flex link" href={url} target="_blank" rel="noopener noreferrer">
-					<img src={image} alt={title} />
-					<span>{getYear(date)}</span>
-					{title}
-				</a>
-			{:else}
-				<a rel="prefetch" class="flex link" href={slug}>
-					<img src="/img{slug}.jpg" alt={title} />
-					<span>{getYear(date)}</span>
-					{title}
-				</a>
-			{/if}
-		</li>
+	{#each items as { url, image, title, date, slug, type, visible }}
+		{#if visible}
+			<li transition:fade>
+				{#if url}
+					<a
+						class="flex link"
+						href={url}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src={image}
+							alt={title}
+						/>
+						<span>{getYear(date)}</span>
+						{title}
+					</a>
+				{:else}
+					<a
+						rel="prefetch"
+						class="flex link"
+						href={slug}
+					>
+						<img
+							src="/img{slug}.jpg"
+							alt={title}
+						/>
+						<span>{getYear(date)}</span>
+						{title}
+					</a>
+				{/if}
+			</li>
+		{/if}
 	{/each}
 </ul>
 
