@@ -2,11 +2,48 @@ import type { Talk } from "../../global";
 
 export const talks: Talk[] = [
     {
+        title: 'Svelte 5 runes explained for Vue devs',
+        description: `As I work mostly with nuxt3 / vue3 in my dayjob, I wanted to do a comparison between the upcoming Svelte 5 runes and the vue3 syntax. It was an exciting exercise to compare code.`,
+        date: '2024-06-11',
+        slug: '/talks/2024-06-svienna',
+        assets: [
+            {
+                name: 'Slides',
+                url: 'https://1drv.ms/p/c/061206b6a163fad0/EX9_3RIs9UtKm25PrKTDLVsBrSxMXAdElPsiHZtjKqUd8g?e=VhFVTT',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: 'Component party',
+                url: 'https://component-party.dev/compare/svelte5-vs-vue3',
+            },
+            {
+                name: 'Code Screenshots',
+                url: 'https://ray.so/',
+            },
+            {
+                name: 'Svienna',
+                url: 'https://austria.sveltesociety.dev/',
+            },
+        ],
+        type: "talk",
+    },
+    {
         title: 'A brief history of prototyping',
         description: `This talk is all about prototyping and how we got to the web we know today. It also shows how Svelte has a unique role in providing great playgrounds to get started.`,
         date: '2024-01-22',
         slug: '/talks/2024-01-svienna',
         assets: [
+            {
+                name: 'Video',
+                url: 'https://youtu.be/auqkebVQYXE',
+            },
             {
                 name: 'Slides',
                 url: 'https://1drv.ms/p/c/061206b6a163fad0/EVXkGbTWjStBugNVButeJNYBbT5hcUO3TUVmIR2GlqBCOQ?e=s12LMw&nav=eyJzSWQiOjI1NiwiY0lkIjoxNTc3NDk5ODgzfQ',
