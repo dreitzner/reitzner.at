@@ -8,6 +8,10 @@ export const talks: Talk[] = [
         slug: '/talks/2024-06-svienna',
         assets: [
             {
+                name: 'Video',
+                url: 'https://youtu.be/4idUQlFV02I',
+            },
+            {
                 name: 'Slides',
                 url: 'https://1drv.ms/p/c/061206b6a163fad0/EX9_3RIs9UtKm25PrKTDLVsBrSxMXAdElPsiHZtjKqUd8g?e=VhFVTT',
             },
