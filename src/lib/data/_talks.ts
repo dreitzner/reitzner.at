@@ -2,6 +2,47 @@ import type { Talk } from "../../global";
 
 export const talks: Talk[] = [
     {
+        title: 'Dates - an intersection of a romantic story and Dates in JS​',
+        description: `Taking inspiration from life, I talk about dates. After I recently celbrated my 15th wedding anniversary, I decided to show a hidden part of my website and how I have refactored it in Svelte 5.`,
+        date: '2024-09-17',
+        slug: '/talks/2024-09-svienna',
+        assets: [
+            // {
+            //     name: 'Video',
+            //     url: '',
+            // },
+            {
+                name: 'Slides',
+                url: 'https://1drv.ms/p/c/061206b6a163fad0/EcfswK1bWblKgw6V-GogrgEBbjtAfGFZMtersKO5qO1WcQ?e=u5oGf2',
+            },
+            {
+                name: 'Svelte',
+                url: 'https://svelte.dev/',
+            },
+            {
+                name: 'SvelteKit',
+                url: 'https://kit.svelte.dev/',
+            },
+            {
+                name: 'Svelte 5 Repl',
+                url: 'https://svelte-5-preview.vercel.app/#H4sIAAAAAAAACo1UTY_TMBD9K6NotSRs0yblY7WmXYSEEBz2xgURDiaZtAbHLvak3bLqf0dOnDRNtxKnxM9v3huPZ_wUlEKiDdj3p0DxCgMWfNhsgklA-41b2C1KwmASWF2b3CELmxuxIZBcrZZZQDYL7jOVUa6VJdhhUQi1-sgJYQkKd-B-wxfzJLmLk7s4nX9N37AkYUnyInp3FvdVVC5uoDJdITk0bNkSCZTewRKuLDnl3iIayim981JXBRqxxSJUenfUGnIt5loVdsh94LSellJrE4adVDzMMYIZpEmSnAhVQtWEl4Q6mxm8PQ1b69pcCuokz4IKvr8U0-rNYP46Oq0w_r4U0qjN4PYkYI_8mbz4T3us-fO1cWX-VEv5DbkJI4ghvbsdVUorWp9ou72MWsuXkM7hBv7D5cHphBHcQLf4UPyqLYWDBoomTnvo_qfmhvByzdvkZvCqzVllVNYqJ6HV2KbghKxJMoKn9gh9_31sb8i3Xdui74YcF-xJhW_0E5YoIex0Fj07AoNUGwXJM7T7c1rqaX7ZM5dH_-vrLsvPrnXCqNsdQu8hBeZND21VrrAsMacwjGB5f3p-oQjNlktYgkX64lenzIzaQT5OsE_1MHGz1dW-T70NziVy0wt2Pm3owX0Ws_aBco-SWhRiC7nk1i6zYGVE4R8rh9_7iVzM3KJHnzx8GOF-FMdsD4_ZzRCOuQ04ZrrZGxMdNuY18zsmNuBZpk0DnyXaoGNuNwtjdoeP-c2EjskN2DP7XbWwtJfYEKeu-N3NV9yshGKQAK9J-1svhN1IvmfgmB5zvzFhtZGcMM61rCtlGRjcIKdwPnFPbsUf3TMZ51oRKppAxR-7RRQNhZxZbPTOsqEv4SPFXIqVYmDEak0eL7Wi2Iq_yCCdpvM3Biu_40ZflPvOhEGOrg37c2yPHb7hzTvEIJm-vR1IZHTNFK3jfC1kEc4V3EAaHcO8-w5dPgx-aln0gQc_JH4QF7OuyMEkqHQhSoFFwMjUePhx-Af21oh03wcAAA==',
+            },
+            {
+                name: 'MDN Date',
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date',
+            },
+            {
+                name: 'How long have I been married?',
+                url: '/time',
+            },
+            {
+                name: 'Svienna',
+                url: 'https://austria.sveltesociety.dev/',
+            },
+        ],
+        type: "talk",
+    },
+    {
         title: 'Svelte 5 runes explained for Vue devs',
         description: `As I work mostly with nuxt3 / vue3 in my dayjob, I wanted to do a comparison between the upcoming Svelte 5 runes and the vue3 syntax. It was an exciting exercise to compare code.`,
         date: '2024-06-11',
