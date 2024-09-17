@@ -23,8 +23,8 @@
 	const monWed = $derived(
 		yearWed * 12 + new Date(nowTime - weddingTime).getMonth() + getMonthAdjust(weddingDate),
 	);
-	const quaName = $derived(Math.floor(monName / 3));
-	const quaWed = $derived(Math.floor(monWed / 3));
+	const quaName = $derived(Math.floor(monName / 4));
+	const quaWed = $derived(Math.floor(monWed / 4));
 
 	function getMonthAdjust(date: Date) {
 		const nowDays = now.getDate();
