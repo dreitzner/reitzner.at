@@ -85,8 +85,8 @@
 			weekWed = now.diff(weddingTime, 'weeks'),
 			monName = now.diff(nameTime, 'months'),
 			monWed = now.diff(weddingTime, 'months'),
-			quaName = Math.floor(now.diff(nameTime, 'months') / 3),
-			quaWed = Math.floor(now.diff(weddingTime, 'months') / 3),
+			quaName = Math.floor(now.diff(nameTime, 'months') / 4),
+			quaWed = Math.floor(now.diff(weddingTime, 'months') / 4),
 			yearName = now.diff(nameTime, 'years'),
 			yearWed = now.diff(weddingTime, 'years')
 		}, 1000);
