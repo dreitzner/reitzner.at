@@ -2,7 +2,12 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { LayoutData } from './$types';
-	export let data: LayoutData;
+	interface Props {
+		data: LayoutData;
+		children?: import('svelte').Snippet;
+	}
+
+	let { data, children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -18,7 +23,7 @@
 <Nav pathname={data.pathname} />
 
 <main>
-	<slot />
+	{@render children?.()}
 </main>
 
 <Footer />

@@ -3,7 +3,11 @@
 	// import { page } from '$app/stores';
 	import Wappen from '$lib/icons/Wappen.svelte';
 
-	export let pathname: string;
+	interface Props {
+		pathname: string;
+	}
+
+	let { pathname }: Props = $props();
 </script>
 
 <nav class="flex">
@@ -24,7 +28,7 @@
 				music
 			</a>
 		</li>
-		<li class="spacer" />
+		<li class="spacer"></li>
 		<li>
 			<a
 				rel="prefetch"

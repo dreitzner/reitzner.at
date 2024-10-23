@@ -2,7 +2,11 @@
 	import ItemList from './ItemList.svelte';
 	import { contentFilters } from '$lib/data/filters';
 	import type { PageData } from './$types';
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <h1>my content</h1>

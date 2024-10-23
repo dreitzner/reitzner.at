@@ -8,8 +8,8 @@
 		level: number;
 	}
 
-	let vibrateArr = [];
-	let vibrateValue;
+	let vibrateArr = $state<number[]>([]);
+	let vibrateValue = $state<number>(0);
 
 	function addVibrate() {
 		vibrateArr.push(vibrateValue);
@@ -24,9 +24,9 @@
 		window.navigator.vibrate(vibrateSeq);
 	}
 
-	let batteryLevel = 77;
-	let batteryStatus;
-	let batteryIco = 'fa-battery-full';
+	let batteryLevel = $state(77);
+	let batteryStatus = $state();
+	let batteryIco = $state('fa-battery-full');
 
 	function batteryChange(battery: Battery) {
 		batteryLevel = battery.level * 100;
@@ -52,7 +52,7 @@
 		}
 	}
 
-	let lux = '?';
+	let lux = $state('?');
 	onMount(async () => {
 		// @ts-ignore
 		const battery = await navigator?.getBattery();
@@ -66,10 +66,10 @@
 		if ('AmbientLightSensor' in window) {
 			//@ts-ignore
 			const sensor = new AmbientLightSensor();
-			sensor.addEventListener('reading', (event) => {
+			sensor.addEventListener('reading', (event: any) => {
 				lux = sensor.illuminance;
 			});
-			sensor.addEventListener('error', (event) => {
+			sensor.addEventListener('error', (event: any) => {
 				console.log(event.error.name, event.error.message);
 			});
 			sensor.start();
@@ -95,7 +95,7 @@
 	</header>
 	<section id="vibrate">
 		<h2>
-			<i class="fa fa-mobile" aria-hidden="true" />
+			<i class="fa fa-mobile" aria-hidden="true"></i>
 			<span>Vibration</span>
 		</h2>
 		<pre id="vibrateArr" class="code-example">{JSON.stringify(vibrateArr)}</pre>
@@ -106,24 +106,24 @@
 			class="u-full-width"
 			bind:value={vibrateValue}
 		/>
-		<button type="button" id="addVibrate" class="u-full-width" on:click={() => addVibrate()}
+		<button type="button" id="addVibrate" class="u-full-width" onclick={() => addVibrate()}
 			>Hinzufügen</button
 		>
-		<button type="button" id="delVibrate" class="u-full-width" on:click={() => delVibrate()}
+		<button type="button" id="delVibrate" class="u-full-width" onclick={() => delVibrate()}
 			>Zurück setzen</button
 		>
-		<button type="button" id="doVibrate" class="u-full-width" on:click={() => doVibrate()}
+		<button type="button" id="doVibrate" class="u-full-width" onclick={() => doVibrate()}
 			>Vibrieren</button
 		>
 	</section>
 	<section id="battery">
 		<h2>
-			<i class="fa {batteryIco}" aria-hidden="true" />
+			<i class="fa {batteryIco}" aria-hidden="true"></i>
 			<span>Akkustatus</span>
 		</h2>
-		<h1 class="u-pull-right">
-			<i id="batteryIco" class="fa fa-battery-full" aria-hidden="true" />
-		</h1>
+		<div class="u-pull-right">
+			<i id="batteryIco" class="fa fa-battery-full" aria-hidden="true"></i>
+		</div>
 		<h3>
 			<span id="batteryPrct">{batteryLevel}</span>%
 		</h3>
@@ -131,7 +131,7 @@
 	</section>
 	<section id="ambientLight">
 		<h2>
-			<i class="fa fa-lightbulb-o" aria-hidden="true" />
+			<i class="fa fa-lightbulb-o" aria-hidden="true"></i>
 			<span>Umgebungslicht</span>
 		</h2>
 		<span id="lux">{lux}</span>
@@ -140,7 +140,7 @@
 	</section>
 	<section id="push">
 		<h2>
-			<i class="fa fa-bell" aria-hidden="true" />
+			<i class="fa fa-bell" aria-hidden="true"></i>
 			<span>Push Nachricht</span>
 		</h2>
 

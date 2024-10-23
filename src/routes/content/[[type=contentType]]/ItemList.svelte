@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { SharedContent } from "../../../global";
 
-	export let items: SharedContent[];
+	interface Props {
+		items: SharedContent[];
+	}
+
+	let { items }: Props = $props();
 
 	const getYear = (dateString: string) => new Date(dateString).getFullYear();
 </script>

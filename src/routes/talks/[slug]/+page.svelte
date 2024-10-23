@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { getDateFromString } from '$lib/services/date';
 	import type { PageData } from './$types';
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 	const hasRelAndTarget = (url: string) => url.startsWith('http');
 </script>
 

@@ -1,7 +1,7 @@
 <script>
-	export let status;
 	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
+	let { status } = $props();
 </script>
 
 <style>
@@ -32,4 +32,4 @@
 
 <h1>{$page.status}</h1>
 
-<p>{$page.error.message}</p>
+<p>{$page.error?.message ?? 'Some Error'}</p>
