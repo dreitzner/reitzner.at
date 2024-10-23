@@ -1,96 +1,46 @@
-<script>
-	import { onMount } from "svelte";
+<script lang="ts">
+	const nameDate = new Date('2009-09-09T12:00:00');
+	const weddingDate = new Date('2009-09-12T15:00:00');
+	const nameTime = nameDate.getTime();
+	const weddingTime = weddingDate.getTime();
+	let now = $state(new Date());
+	const nowTime = $derived(now.getTime());
+	const secName = $derived(Math.floor((nowTime - nameTime) / 1000));
+	const secWed = $derived(Math.floor((nowTime - weddingTime) / 1000));
+	const minName = $derived(Math.floor(secName / 60));
+	const minWed = $derived(Math.floor(secWed / 60));
+	const hourName = $derived(Math.floor(minName / 60));
+	const hourWed = $derived(Math.floor(minWed / 60));
+	const dayName = $derived(Math.floor(hourName / 24));
+	const dayWed = $derived(Math.floor(hourWed / 24));
+	const weekName = $derived(Math.floor(dayName / 7));
+	const weekWed = $derived(Math.floor(dayWed / 7));
+	const yearName = $derived(Math.abs(new Date(nowTime - nameTime).getFullYear() - 1970));
+	const yearWed = $derived(Math.abs(new Date(nowTime - weddingTime).getFullYear() - 1970));
+	const monName = $derived(
+		yearName * 12 + new Date(nowTime - nameTime).getMonth() + getMonthAdjust(nameDate),
+	);
+	const monWed = $derived(
+		yearWed * 12 + new Date(nowTime - weddingTime).getMonth() + getMonthAdjust(weddingDate),
+	);
+	const quaName = $derived(Math.floor(monName / 4));
+	const quaWed = $derived(Math.floor(monWed / 4));
 
-	/**
-	 * @type {number}
-	 */
-	let secName;
-	/**
-	 * @type {number}
-	 */
-	let secWed;
-	/**
-	 * @type {number}
-	 */
-	let minName;
-	/**
-	 * @type {number}
-	 */
-	let minWed;
-	/**
-	 * @type {number}
-	 */
-	let hourName;
-	/**
-	 * @type {number}
-	 */
-	let hourWed;
-	/**
-	 * @type {number}
-	 */
-	let dayName;
-	/**
-	 * @type {number}
-	 */
-	let dayWed;
-	/**
-	 * @type {number}
-	 */
-	let weekName;
-	/**
-	 * @type {number}
-	 */
-	let weekWed;
-	/**
-	 * @type {number}
-	 */
-	let monName;
-	/**
-	 * @type {number}
-	 */
-	let monWed;
-	/**
-	 * @type {number}
-	 */
-	let quaName;
-	/**
-	 * @type {number}
-	 */
-	let quaWed;
-	/**
-	 * @type {number}
-	 */
-	let yearName;
-	/**
-	 * @type {number}
-	 */
-	let yearWed;
+	function getMonthAdjust(date: Date) {
+		const nowDays = now.getDate();
+		const dateDays = date.getDate();
+		if (nowDays < dateDays) return 0;
+		if (nowDays > dateDays) return 1;
+		return nowDays >= dateDays && now.getHours() >= date.getHours() ? 1 : 0;
+	}
 
-	onMount(async() => {
-		const moment = (await import('moment')).default;
+	$effect(() => {
+		const interval = setInterval(() => {
+			now = new Date();
+		}, 100);
 
-		const nameTime = moment('2009-09-09 12:00:00');
-		const weddingTime = moment('2009-09-12 15:00:00');
-		setInterval(() => {
-			const now = moment();
-			secName = now.diff(nameTime, 'seconds'),
-			secWed = now.diff(weddingTime, 'seconds'),
-			minName = now.diff(nameTime, 'minutes'),
-			minWed = now.diff(weddingTime, 'minutes'),
-			hourName = now.diff(nameTime, 'hours'),
-			hourWed = now.diff(weddingTime, 'hours'),
-			dayName = now.diff(nameTime, 'days'),
-			dayWed = now.diff(weddingTime, 'days'),
-			weekName = now.diff(nameTime, 'weeks'),
-			weekWed = now.diff(weddingTime, 'weeks'),
-			monName = now.diff(nameTime, 'months'),
-			monWed = now.diff(weddingTime, 'months'),
-			quaName = Math.floor(now.diff(nameTime, 'months') / 4),
-			quaWed = Math.floor(now.diff(weddingTime, 'months') / 4),
-			yearName = now.diff(nameTime, 'years'),
-			yearWed = now.diff(weddingTime, 'years')
-		}, 1000);
-	})
+		return () => clearInterval(interval);
+	});
 </script>
 
 <div class="grid">
@@ -130,8 +80,15 @@
 		grid-template-columns: repeat(3, minmax(min-content, max-content));
 		grid-auto-rows: auto;
 		text-align: right;
-	}
-	.grid div {
-		padding: 10px;
+		font-size: 1.125rem;
+		justify-content: center;
+		div {
+			padding: 0.675rem;
+
+			&:nth-child(-n + 3),
+			&:nth-child(3n + 1) {
+				font-weight: bold;
+			}
+		}
 	}
 </style>
