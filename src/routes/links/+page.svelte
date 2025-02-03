@@ -10,14 +10,6 @@
 		>
 	</li>
 	<li>
-		<a
-			class="link -pre"
-			href="https://twitter.com/reitznerdomenik"
-			target="_blank"
-			rel="noopener noreferrer">twix (twitter / X)</a
-		>
-	</li>
-	<li>
 		<a class="link -pre" href="https://gravatar.com/dreitzner" target="_blank" rel="noopener noreferrer">
 			Gravatar Profile
 		</a>
