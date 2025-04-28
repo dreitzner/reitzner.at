@@ -2,6 +2,39 @@ import type { Talk } from '../../global';
 
 export const talks: Talk[] = [
 	{
+		title: 'Using SvelteKit and MIT appinventor to inspire young girls for tech',
+		description: `In this talk I tell the story of how we inspired young girls for tech @woom. Using SveltKit, MIT appinventor and AI as tools we showed them how we work in tech.`,
+		date: '2025-04-28',
+		slug: '/talks/2025-04-svienna',
+		assets: [
+			// {
+			// 	name: 'Video',
+			// 	url: 'https://youtu.be/9HBVmUv7gpU',
+			// },
+			{
+				name: 'Slides',
+				url: 'https://1drv.ms/p/c/061206b6a163fad0/EV4B93q1stNJhhv86Go_lCkBormyEPYJaQjxlIC5sAZc_Q',
+			},
+			{
+				name: 'Svelte',
+				url: 'https://svelte.dev/',
+			},
+			{
+				name: 'Wiener Töchertag',
+				url: 'https://www.toechtertag.at/',
+			},
+			{
+				name: 'Bike Dashboard',
+				url: 'https://toechtertag-2025.pages.dev/',
+			},
+			{
+				name: 'Svienna',
+				url: 'https://austria.sveltesociety.dev/',
+			},
+		],
+		type: 'talk',
+	},
+	{
 		title: 'Hey Svelte! Extend my CMS',
 		description: `In this talk I go through all of the steps of how to extend the kontent.ai CMS with Svelte. I talk about how to use external libraries, typing them and on how to handle different use cases in the same project. I also talk about how to include an icon library ith a twist.`,
 		date: '2025-02-03',
