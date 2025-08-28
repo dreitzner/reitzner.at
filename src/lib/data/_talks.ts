@@ -7,10 +7,10 @@ export const talks: Talk[] = [
 		date: '2025-04-28',
 		slug: '/talks/2025-04-svienna',
 		assets: [
-			// {
-			// 	name: 'Video',
-			// 	url: 'https://youtu.be/9HBVmUv7gpU',
-			// },
+			{
+				name: 'Video',
+				url: 'https://youtu.be/pDx1a078in8',
+			},
 			{
 				name: 'Slides',
 				url: 'https://1drv.ms/p/c/061206b6a163fad0/EV4B93q1stNJhhv86Go_lCkBormyEPYJaQjxlIC5sAZc_Q',
