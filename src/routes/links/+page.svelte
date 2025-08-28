@@ -1,6 +1,7 @@
 <h1>Links</h1>
 <ul>
 	<li><a class="link -pre" href="/content">Alle meine Talks und Podcasts</a></li>
+	<li><a class="link -pre" href="https://www.youtube.com/watch?v=pDx1a078in8&list=PLwB09TOpsRA_rPbdGcoLL1A1L6ZKJy59r">Alle meine Dev Talks auf Youtube</a></li>
 	<li>
 		<a
 			class="link -pre"

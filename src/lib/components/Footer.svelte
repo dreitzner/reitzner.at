@@ -1,7 +1,6 @@
 <script>
 	import Mail from '$lib/icons/Mail.svelte';
 	import Github from '$lib/icons/Github.svelte';
-	import Twitter from '$lib/icons/Twitter.svelte';
 </script>
 
 <footer class="flex">
@@ -10,9 +9,6 @@
 	</a>
 	<a class="flex" href="https://github.com/dreitzner" title="github">
 		<Github />
-	</a>
-	<a class="flex" href="https://twitter.com/reitznerdomenik" title="twitter">
-		<Twitter />
 	</a>
 </footer>
 
@@ -39,9 +35,6 @@
 	}
 	footer :global(.github) {
 		height: 24px;
-	}
-	footer :global(.twitter) {
-		height: 28px;
 	}
 	.flex {
 		align-items: center;
