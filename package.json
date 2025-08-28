@@ -6,9 +6,10 @@
 		"prebuild": "pnpm generate:devTo",
 		"build": "vite build",
 		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"lint": "prettier --plugin-search-dir . --check . && eslint . && prettier --check .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"pregenerate:devTo": "rimraf src/lib/data/_devTo.ts",
 		"generate:devTo": "node ./tools/devTo.js"
@@ -37,10 +38,15 @@
 	},
 	"type": "module",
 	"volta": {
-		"node": "22.11.0",
+		"node": "22.18.0",
 		"pnpm": "10.15.0"
 	},
 	"dependencies": {
 		"@svackages/sveltekit-hook-redirect": "^0.0.1"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
