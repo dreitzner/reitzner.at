@@ -2,6 +2,35 @@ import type { Talk } from '../../global';
 
 export const talks: Talk[] = [
 	{
+		title: 'Async ⏳ Svelte',
+		description: `In this talk we take a look at the new Async Svelte feature and some possible use cases. All squares, circles, semicircles and other shapes must find their home.`,
+		date: '2025-09-16',
+		slug: '/talks/2025-09-svienna',
+		assets: [
+			// {
+			// 	name: 'Video',
+			// 	url: 'https://youtu.be/pDx1a078in8',
+			// },
+			{
+				name: 'Slides',
+				url: 'https://2025-09-svienna.pages.dev/slides',
+			},
+			{
+				name: 'Svelte',
+				url: 'https://svelte.dev/',
+			},
+			{
+				name: 'Github repo',
+				url: 'https://github.com/dreitzner/2025-09-svienna',
+			},
+			{
+				name: 'Svienna',
+				url: 'https://austria.sveltesociety.dev/',
+			},
+		],
+		type: 'talk',
+	},
+	{
 		title: 'Using SvelteKit and MIT appinventor to inspire young girls for tech',
 		description: `In this talk I tell the story of how we inspired young girls for tech @woom. Using SveltKit, MIT appinventor and AI as tools we showed them how we work in tech.`,
 		date: '2025-04-28',
